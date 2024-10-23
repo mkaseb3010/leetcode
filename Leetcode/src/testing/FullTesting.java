@@ -1424,7 +1424,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "101";
 			long result = solution.minimumSteps(input);
-			assertEquals(2, result, "Test case 1 failed.");
+			assertEquals(1, result, "Test case 1 failed.");
 		}
 
 		@Test
@@ -1432,7 +1432,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "111000";
 			long result = solution.minimumSteps(input);
-			assertEquals(0, result, "Test case 2 failed.");
+			assertEquals(9, result, "Test case 2 failed.");
 		}
 
 		@Test
@@ -1456,7 +1456,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "010101";
 			long result = solution.minimumSteps(input);
-			assertEquals(6, result, "Test case 5 failed.");
+			assertEquals(3, result, "Test case 5 failed.");
 		}
 
 		@Test
@@ -1464,7 +1464,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "11000";
 			long result = solution.minimumSteps(input);
-			assertEquals(3, result, "Test case 6 failed.");
+			assertEquals(6, result, "Test case 6 failed.");
 		}
 
 		@Test
@@ -1472,7 +1472,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "111000111";
 			long result = solution.minimumSteps(input);
-			assertEquals(6, result, "Test case 7 failed.");
+			assertEquals(9, result, "Test case 7 failed.");
 		}
 
 		@Test
@@ -1496,7 +1496,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "1010101010101010";
 			long result = solution.minimumSteps(input);
-			assertEquals(64, result, "Test case 10 failed.");
+			assertEquals(36, result, "Test case 10 failed.");
 		}
 	}
 
@@ -1590,6 +1590,79 @@ public class FullTesting {
 			October16.Solution solution = new October16().new Solution();
 			String result = solution.longestDiverseString(50, 50, 50);
 			assertTrue(isValidDiverseString(result), "Test case 10 failed.");
+		}
+	}
+
+	@Nested
+	class October17Test {
+		@Test
+		public void testSimpleSwap() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(2736);
+			assertEquals(7236, result, "Test case 1 failed.");
+		}
+
+		@Test
+		public void testNoSwapNeeded() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(9876);
+			assertEquals(9876, result, "Test case 2 failed.");
+		}
+
+		@Test
+		public void testSingleDigit() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(7);
+			assertEquals(7, result, "Test case 3 failed.");
+		}
+
+		@Test
+		public void testSameDigits() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(1111);
+			assertEquals(1111, result, "Test case 4 failed.");
+		}
+
+		@Test
+		public void testSwapLastDigits() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(1993);
+			assertEquals(9913, result, "Test case 5 failed.");
+		}
+
+		@Test
+		public void testSwapFirstDigits() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(9123);
+			assertEquals(9321, result, "Test case 6 failed.");
+		}
+
+		@Test
+		public void testLargeNumber() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(98368);
+			assertEquals(98863, result, "Test case 7 failed.");
+		}
+
+		@Test
+		public void testAlreadyLargestPossible() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(876543);
+			assertEquals(876543, result, "Test case 8 failed.");
+		}
+
+		@Test
+		public void testSwapMiddleDigits() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(12943);
+			assertEquals(92143, result, "Test case 9 failed.");
+		}
+
+		@Test
+		public void testSwapFirstAndLast() {
+			October17.Solution solution = new October17().new Solution();
+			int result = solution.maximumSwap(1342);
+			assertEquals(4312, result, "Test case 10 failed.");
 		}
 	}
 }
