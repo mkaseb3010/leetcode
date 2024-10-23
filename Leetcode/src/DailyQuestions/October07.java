@@ -1,7 +1,7 @@
 package DailyQuestions;
 import java.util.*;
 
-public class October7 {
+public class October07 {
 	public class Solution {
 	    public int minLength(String s) {
 	        Stack<Character> stack = new Stack<>();

@@ -1,7 +1,7 @@
 package DailyQuestions;
 import java.util.*;
 
-public class October2 {
+public class October02 {
 	public class Solution {
 	    public int[] arrayRankTransform(int[] arr) {
 	        int n = arr.length;

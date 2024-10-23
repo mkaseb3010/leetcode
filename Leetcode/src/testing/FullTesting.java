@@ -17,7 +17,7 @@ public class FullTesting {
 	class October1Test {
 		@Test
 		void testBasic() {
-			October1.Solution solution = new October1().new Solution();
+			October01.Solution solution = new October01().new Solution();
 			int[] arr1 = {1, 2, 3, 4, 5, 10, 6, 7, 8, 9};
 			int k1 = 5;
 			assertTrue(solution.canArrange(arr1, k1), "October1 Test case 1 failed.");
@@ -25,7 +25,7 @@ public class FullTesting {
 		
 		@Test
 		void testNoPairs() {
-			October1.Solution solution = new October1().new Solution();		
+			October01.Solution solution = new October01().new Solution();		
 			int[] arr2 = {1, 2, 3, 4, 5, 6};
 			int k2 = 7;
 			assertTrue(solution.canArrange(arr2, k2), "October1 Test case 2 failed.");
@@ -33,7 +33,7 @@ public class FullTesting {
 		
 		@Test
 		void testWithNegativeNumbers() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {-10, 10};
 		    int k = 2;
 		    assertTrue(solution.canArrange(arr, k), "Test case with negative numbers failed");
@@ -41,7 +41,7 @@ public class FullTesting {
 
 		@Test
 		void testNotAllPairsMatch() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {1, 2, 3, 4, 5, 6};
 		    int k = 7;
 		    assertTrue(solution.canArrange(arr, k), "Test case with not all pairs matching failed");
@@ -49,7 +49,7 @@ public class FullTesting {
 
 		@Test
 		void testMixedPositiveAndNegative() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {-1, 1, -2, 2, -3, 3, -4, 4};
 		    int k = 3;
 		    assertTrue(solution.canArrange(arr, k), "Test case with mixed positive and negative numbers failed");
@@ -57,7 +57,7 @@ public class FullTesting {
 
 		@Test
 		void testAllZeros() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {0, 0, 0, 0};
 		    int k = 1;
 		    assertTrue(solution.canArrange(arr, k), "Test case with all zeros failed");
@@ -65,7 +65,7 @@ public class FullTesting {
 
 		@Test
 		void testLargeNumbers() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {Integer.MAX_VALUE, Integer.MIN_VALUE};
 		    int k = 4;
 		    assertFalse(solution.canArrange(arr, k), "Test case with large numbers failed");
@@ -73,7 +73,7 @@ public class FullTesting {
 
 		@Test
 		void testSingleElement() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {5};
 		    int k = 5;
 		    assertFalse(solution.canArrange(arr, k), "Test case with a single element failed");
@@ -81,7 +81,7 @@ public class FullTesting {
 
 		@Test
 		void testPairCountsMismatch() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {1, 1, 2, 2, 3, 4};
 		    int k = 3;
 		    assertFalse(solution.canArrange(arr, k), "Test case with mismatched pair counts failed");
@@ -89,7 +89,7 @@ public class FullTesting {
 
 		@Test
 		void testLargeK() {
-		    October1.Solution solution = new October1().new Solution();
+		    October01.Solution solution = new October01().new Solution();
 		    int[] arr = {10, 20, 30, 40};
 		    int k = 100;
 		    assertFalse(solution.canArrange(arr, k), "Test case with large k failed");
@@ -100,63 +100,63 @@ public class FullTesting {
     class October2Test {
         @Test
         void testEmptyArray() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {};
             assertArrayEquals(new int[]{}, solution.arrayRankTransform(arr), "Empty array failed");
         }
 
         @Test
         void testSingleElement() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {5};
             assertArrayEquals(new int[]{1}, solution.arrayRankTransform(arr), "Single element failed");
         }
 
         @Test
         void testAllElementsTheSame() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {100, 100, 100, 100};
             assertArrayEquals(new int[]{1, 1, 1, 1}, solution.arrayRankTransform(arr), "All elements the same failed");
         }
 
         @Test
         void testAlreadySortedArray() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {1, 2, 3, 4, 5};
             assertArrayEquals(new int[]{1, 2, 3, 4, 5}, solution.arrayRankTransform(arr), "Already sorted array failed");
         }
 
         @Test
         void testReverseSortedArray() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {5, 4, 3, 2, 1};
             assertArrayEquals(new int[]{5, 4, 3, 2, 1}, solution.arrayRankTransform(arr), "Reverse sorted array failed");
         }
 
         @Test
         void testMixedPositiveAndNegativeNumbers() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {-10, 0, 5, -20, 10};
             assertArrayEquals(new int[]{2, 3, 4, 1, 5}, solution.arrayRankTransform(arr), "Mixed positive and negative numbers failed");
         }
 
         @Test
         void testAllNegativeNumbers() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {-1, -2, -3, -4, -5};
             assertArrayEquals(new int[]{5, 4, 3, 2, 1}, solution.arrayRankTransform(arr), "All negative numbers failed");
         }
 
         @Test
         void testMaxAndMinIntegers() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {Integer.MAX_VALUE, Integer.MIN_VALUE, 0};
             assertArrayEquals(new int[]{3, 1, 2}, solution.arrayRankTransform(arr), "Max and Min integers failed");
         }
 
         @Test
         void testLargeNumberOfElements() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = new int[1000];
             Arrays.fill(arr, 100); 
             int[] expected = new int[1000];
@@ -166,7 +166,7 @@ public class FullTesting {
 
         @Test
         void testRepeatedElementsInRandomOrder() {
-            October2.Solution solution = new October2().new Solution();
+            October02.Solution solution = new October02().new Solution();
             int[] arr = {10, 5, 5, 10, 20, 5};
             assertArrayEquals(new int[]{2, 1, 1, 2, 3, 1}, solution.arrayRankTransform(arr), "Repeated elements in random order failed");
         }
@@ -176,7 +176,7 @@ public class FullTesting {
 	class October3Test {
 		@Test
 	    void testSumDivisibleByP() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {1, 2, 3, 4};
 		    int p = 10;
 		    assertEquals(0, solution.minSubarray(nums, p), "Sum divisible by p failed");
@@ -184,7 +184,7 @@ public class FullTesting {
 		
 		@Test
 		void testNoValidSubarray() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {1, 2, 3};
 		    int p = 7;
 		    assertEquals(-1, solution.minSubarray(nums, p), "No valid subarray failed");
@@ -192,7 +192,7 @@ public class FullTesting {
 
 		@Test
 		void testSingleElement() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {5};
 		    int p = 2;
 		    assertEquals(-1, solution.minSubarray(nums, p), "Single element failed");
@@ -200,7 +200,7 @@ public class FullTesting {
 
 		@Test
 		void testLargeP() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {3, 1, 4, 1, 5, 9};
 		    int p = 100;
 		    assertEquals(-1, solution.minSubarray(nums, p), "Large p value failed");
@@ -208,7 +208,7 @@ public class FullTesting {
 
 		@Test
 		void testRemainderSubarray() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {3, 1, 4, 1, 5, 9};
 		    int p = 7;
 		    assertEquals(1, solution.minSubarray(nums, p), "Remainder subarray failed");
@@ -216,7 +216,7 @@ public class FullTesting {
 
 		@Test
 		void testAllElementsDivisibleByP() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {2, 4, 6, 8};
 		    int p = 2;
 		    assertEquals(0, solution.minSubarray(nums, p), "All elements divisible by p failed");
@@ -224,7 +224,7 @@ public class FullTesting {
 
 		@Test
 		void testSumEqualsP() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {5, 5, 5};
 		    int p = 15;
 		    assertEquals(0, solution.minSubarray(nums, p), "Sum equals p failed");
@@ -232,7 +232,7 @@ public class FullTesting {
 		
 		@Test
 		void testAllZeros() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {0, 0, 0, 0};
 		    int p = 5;
 		    assertEquals(0, solution.minSubarray(nums, p), "All elements are zeroes failed");
@@ -240,7 +240,7 @@ public class FullTesting {
 
 		@Test
 		void testSubarrayRemovalAtBeginning() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {7, 6, 5, 1};
 		    int p = 5;
 		    assertEquals(-1, solution.minSubarray(nums, p), "Subarray removal at beginning failed");
@@ -248,7 +248,7 @@ public class FullTesting {
 
 		@Test
 		void testRemoveLastElement() {
-		    October3.Solution solution = new October3().new Solution();
+		    October03.Solution solution = new October03().new Solution();
 		    int[] nums = {1, 1, 1, 3};
 		    int p = 2;
 		    assertEquals(0, solution.minSubarray(nums, p), "Only last element removal failed");
@@ -259,7 +259,7 @@ public class FullTesting {
 	class October4Test {
 		@Test
 		public void testEvenPlayersBalanced() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {2, 3, 3, 2};
 		    long expected = 12;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -267,7 +267,7 @@ public class FullTesting {
 
 		@Test
 		public void testMinimumInputSizeValid() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 1};
 		    long expected = 1;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -275,7 +275,7 @@ public class FullTesting {
 
 		@Test
 		public void testMinimumInputSizeInvalid() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 2};
 		    long expected = 2;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -283,7 +283,7 @@ public class FullTesting {
 
 		@Test
 		public void testAllSameSkillLevel() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {4, 4, 4, 4};
 		    long expected = 32;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -291,7 +291,7 @@ public class FullTesting {
 
 		@Test
 		public void testMixedSkillsInvalidPairing() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 3, 3, 5};
 		    long expected = 14;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -299,7 +299,7 @@ public class FullTesting {
 
 		@Test
 		public void testDescendingOrder() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {10, 8, 6, 4};
 		    long expected = 88;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -307,7 +307,7 @@ public class FullTesting {
 
 		@Test
 		public void testLargeDifferenceInvalid() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 2, 3, 10};
 		    long expected = -1;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -315,7 +315,7 @@ public class FullTesting {
 
 		@Test
 		public void testEvenPlayersValid() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 2, 2, 3};
 		    long expected = 7;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -323,7 +323,7 @@ public class FullTesting {
 
 		@Test
 		public void testHighSkillDifference() {
-			October4.Solution solution = new October4().new Solution();
+			October04.Solution solution = new October04().new Solution();
 		    int[] skill = {1, 1, 100, 100};
 		    long expected = 200;
 		    assertEquals(expected, solution.dividePlayers(skill));
@@ -334,7 +334,7 @@ public class FullTesting {
 	class October5Test {
 		@Test
 		public void testBasicValidPermutation() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "ab";
 		    String s2 = "eidbaooo";
 		    boolean expected = true;
@@ -343,7 +343,7 @@ public class FullTesting {
 		
 		@Test
 		public void testNoPermutation() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "ab";
 		    String s2 = "eidboaoo";
 		    boolean expected = false;
@@ -352,7 +352,7 @@ public class FullTesting {
 		
 		@Test
 		public void testExactMatch() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "abc";
 		    String s2 = "abc";
 		    boolean expected = true;
@@ -361,7 +361,7 @@ public class FullTesting {
 
 		@Test
 		public void testPermutationAtEnd() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "abc";
 		    String s2 = "xyzzabc";
 		    boolean expected = true;
@@ -370,7 +370,7 @@ public class FullTesting {
 
 		@Test
 		public void testNoPermutationLargeString() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "ab";
 		    String s2 = "eidbaoooooo";
 		    boolean expected = true;
@@ -379,7 +379,7 @@ public class FullTesting {
 
 		@Test
 		public void testSingleCharacterMatch() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "a";
 		    String s2 = "a";
 		    boolean expected = true;
@@ -388,7 +388,7 @@ public class FullTesting {
 
 		@Test
 		public void testSingleCharacterNoMatch() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "a";
 		    String s2 = "b";
 		    boolean expected = false;
@@ -397,7 +397,7 @@ public class FullTesting {
 
 		@Test
 		public void testPermutationInMiddle() {
-			October5.Solution solution = new October5().new Solution();
+			October05.Solution solution = new October05().new Solution();
 		    String s1 = "ab";
 		    String s2 = "xxbaxy";
 		    boolean expected = true;
@@ -409,7 +409,7 @@ public class FullTesting {
 	class October6Test {
 		@Test
 		public void testIdenticalSentences() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming";
 		    String sentence2 = "I love programming";
 		    boolean expected = true;
@@ -418,7 +418,7 @@ public class FullTesting {
 
 		@Test
 		public void testCompletelyDifferentSentences() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming";
 		    String sentence2 = "She enjoys reading";
 		    boolean expected = false;
@@ -427,7 +427,7 @@ public class FullTesting {
 
 		@Test
 		public void testSentencePrefix() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming";
 		    String sentence2 = "I love";
 		    boolean expected = true;
@@ -436,7 +436,7 @@ public class FullTesting {
 
 		@Test
 		public void testSentenceSuffix() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming";
 		    String sentence2 = "love programming";
 		    boolean expected = true;
@@ -445,7 +445,7 @@ public class FullTesting {
 
 		@Test
 		public void testOneWordCommonAtStart() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "Hello world";
 		    String sentence2 = "Hello everyone";
 		    boolean expected = false;
@@ -454,7 +454,7 @@ public class FullTesting {
 
 		@Test
 		public void testOneWordCommonAtEnd() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I like apples";
 		    String sentence2 = "She eats apples";
 		    boolean expected = false;
@@ -463,7 +463,7 @@ public class FullTesting {
 
 		@Test
 		public void testPrefixAndSuffixMatch() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming in Java";
 		    String sentence2 = "I love coding in Java";
 		    boolean expected = false;
@@ -472,7 +472,7 @@ public class FullTesting {
 
 		@Test
 		public void testNoCommonWords() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming";
 		    String sentence2 = "She hates running";
 		    boolean expected = false;
@@ -481,7 +481,7 @@ public class FullTesting {
 
 		@Test
 		public void testFullMatchExceptMiddle() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "The quick brown fox jumps over the lazy dog";
 		    String sentence2 = "The slow yellow fox jumps over the lazy dog";
 		    boolean expected = false;
@@ -490,7 +490,7 @@ public class FullTesting {
 
 		@Test
 		public void testVeryShortSentencesNoMatch() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "Hi";
 		    String sentence2 = "Bye";
 		    boolean expected = false;
@@ -499,7 +499,7 @@ public class FullTesting {
 
 		@Test
 		public void testEmptySentences() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "";
 		    String sentence2 = "";
 		    boolean expected = true;
@@ -508,7 +508,7 @@ public class FullTesting {
 
 		@Test
 		public void testOneEmptySentence() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "";
 		    String sentence2 = "Hello";
 		    boolean expected = false;
@@ -517,7 +517,7 @@ public class FullTesting {
 
 		@Test
 		public void testSingleWordMatch() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "Hello";
 		    String sentence2 = "Hello";
 		    boolean expected = true;
@@ -526,7 +526,7 @@ public class FullTesting {
 
 		@Test
 		public void testLongSentencesNoMatch() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "The quick brown fox jumps over the lazy dog";
 		    String sentence2 = "A fast black cat runs under the energetic dog";
 		    boolean expected = false;
@@ -535,7 +535,7 @@ public class FullTesting {
 
 		@Test
 		public void testPrefixMatchOnly() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "This is a test sentence";
 		    String sentence2 = "This is";
 		    boolean expected = true;
@@ -544,7 +544,7 @@ public class FullTesting {
 
 		@Test
 		public void testSubstringInLongerSentence() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "love programming";
 		    String sentence2 = "I really love programming languages";
 		    boolean expected = false;
@@ -553,7 +553,7 @@ public class FullTesting {
 
 		@Test
 		public void testLargeDifferenceInLengthNoMatch() {
-			October6.Solution solution = new October6().new Solution();
+			October06.Solution solution = new October06().new Solution();
 		    String sentence1 = "I love programming and I enjoy solving problems";
 		    String sentence2 = "I love running";
 		    boolean expected = false;
@@ -565,7 +565,7 @@ public class FullTesting {
 	class October7Test {
 		@Test
 		public void testBasicPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ABCD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -573,7 +573,7 @@ public class FullTesting {
 
 		@Test
 		public void testNoRemovablePairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ACDB";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -581,7 +581,7 @@ public class FullTesting {
 
 		@Test
 		public void testMixedPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "CABD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -589,7 +589,7 @@ public class FullTesting {
 
 		@Test
 		public void testSingleCharacter() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "A";
 		    int expected = 1;
 		    assertEquals(expected, solution.minLength(s));
@@ -597,7 +597,7 @@ public class FullTesting {
 
 		@Test
 		public void testEntireStringRemoved() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ABABABCDCD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -605,7 +605,7 @@ public class FullTesting {
 
 		@Test
 		public void testSinglePairRestUnchanged() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "EFAB";
 		    int expected = 2;
 		    assertEquals(expected, solution.minLength(s));
@@ -613,7 +613,7 @@ public class FullTesting {
 
 		@Test
 		public void testLongStringMultiplePairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ABABCDCDABCD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -621,7 +621,7 @@ public class FullTesting {
 
 		@Test
 		public void testNestedPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "AABBCCDD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -629,7 +629,7 @@ public class FullTesting {
 
 		@Test
 		public void testNoABCD() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "XYZ";
 		    int expected = 3;
 		    assertEquals(expected, solution.minLength(s));
@@ -637,7 +637,7 @@ public class FullTesting {
 
 		@Test
 		public void testConsecutivePairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "AABBCCDD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -645,7 +645,7 @@ public class FullTesting {
 
 		@Test
 		public void testInterleavedNoAdjacent() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ACBD";
 		    int expected = 4;
 		    assertEquals(expected, solution.minLength(s));
@@ -653,7 +653,7 @@ public class FullTesting {
 
 		@Test
 		public void testPairFormingAtDifferentPoints() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "AABBABCD";
 		    int expected = 0;
 		    assertEquals(expected, solution.minLength(s));
@@ -661,7 +661,7 @@ public class FullTesting {
 
 		@Test
 		public void testStringWithNoValidPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ACDCBA";
 		    int expected = 4;
 		    assertEquals(expected, solution.minLength(s));
@@ -669,7 +669,7 @@ public class FullTesting {
 
 		@Test
 		public void testOnlyCDPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "CCD";
 		    int expected = 1;
 		    assertEquals(expected, solution.minLength(s));
@@ -677,7 +677,7 @@ public class FullTesting {
 
 		@Test
 		public void testAlternatingValidInvalidPairs() {
-			October7.Solution solution = new October7().new Solution();
+			October07.Solution solution = new October07().new Solution();
 		    String s = "ABCDDCBA";
 		    int expected = 4;
 		    assertEquals(expected, solution.minLength(s));
@@ -688,7 +688,7 @@ public class FullTesting {
 	class October8Test {
 		@Test
 		public void testBalancedBrackets() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[]";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -696,7 +696,7 @@ public class FullTesting {
 
 		@Test
 		public void testOneSwapNeeded() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "][";
 		    int expected = 1;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -704,7 +704,7 @@ public class FullTesting {
 
 		@Test
 		public void testLongBalancedString() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[[]][]";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -712,7 +712,7 @@ public class FullTesting {
 
 		@Test
 		public void testMultipleSwapsNeeded() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "]]][[[";
 		    int expected = 2;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -720,7 +720,7 @@ public class FullTesting {
 
 		@Test
 		public void testNestedBalancedBrackets() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[[[]]]";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -728,7 +728,7 @@ public class FullTesting {
 
 		@Test
 		public void testLargeUnbalancedString() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[]]]][[[[]";
 		    int expected = 2;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -736,7 +736,7 @@ public class FullTesting {
 
 		@Test
 		public void testEmptyString() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -744,7 +744,7 @@ public class FullTesting {
 
 		@Test
 		public void testAllClosingBrackets() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "]]]]";
 		    int expected = 2;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -752,7 +752,7 @@ public class FullTesting {
 
 		@Test
 		public void testAllOpeningBrackets() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[[[[";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -760,7 +760,7 @@ public class FullTesting {
 
 		@Test
 		public void testAlternatingBalancedBrackets() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[]][[]";
 		    int expected = 1;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -768,7 +768,7 @@ public class FullTesting {
 
 		@Test
 		public void testSingleBracket() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -776,7 +776,7 @@ public class FullTesting {
 
 		@Test
 		public void testLargeValidStringNoSwaps() {
-			October8.Solution solution = new October8().new Solution();
+			October08.Solution solution = new October08().new Solution();
 		    String s = "[[]][[][]][]";
 		    int expected = 0;
 		    assertEquals(expected, solution.minSwaps(s));
@@ -787,7 +787,7 @@ public class FullTesting {
 	class October9Test {
 		@Test
 		public void testValidParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "()";
 		    int expected = 0;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -795,7 +795,7 @@ public class FullTesting {
 
 		@Test
 		public void testAllOpenParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "((((";
 		    int expected = 4;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -803,7 +803,7 @@ public class FullTesting {
 
 		@Test
 		public void testAllCloseParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "))))";
 		    int expected = 4;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -811,7 +811,7 @@ public class FullTesting {
 
 		@Test
 		public void testMixedParenthesesNeedingAdditions() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "())";
 		    int expected = 1;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -819,7 +819,7 @@ public class FullTesting {
 
 		@Test
 		public void testValidNestedParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "((()))";
 		    int expected = 0;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -827,7 +827,7 @@ public class FullTesting {
 
 		@Test
 		public void testEmptyString() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "";
 		    int expected = 0;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -835,7 +835,7 @@ public class FullTesting {
 
 		@Test
 		public void testAlternatingUnbalancedParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = ")()(";
 		    int expected = 2;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -843,7 +843,7 @@ public class FullTesting {
 
 		@Test
 		public void testBalancedSections() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "(()))(";
 		    int expected = 2;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -851,7 +851,7 @@ public class FullTesting {
 
 		@Test
 		public void testNestedParenthesesNeedingAdditions() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "(((";
 		    int expected = 3;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -859,7 +859,7 @@ public class FullTesting {
 
 		@Test
 		public void testOneSidedBalancedParentheses() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = ")))(((";
 		    int expected = 6;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -867,7 +867,7 @@ public class FullTesting {
 
 		@Test
 		public void testLongValidString() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "((()()()))";
 		    int expected = 0;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -875,7 +875,7 @@ public class FullTesting {
 
 		@Test
 		public void testLongUnbalancedString() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "(()()(()";
 		    int expected = 2;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -883,7 +883,7 @@ public class FullTesting {
 
 		@Test
 		public void testComplexUnbalancedCase() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "((())())(((()())())())(";
 		    int expected = 1;
 		    assertEquals(expected, solution.minAddToMakeValid(s));
@@ -891,7 +891,7 @@ public class FullTesting {
 		
 		@Test
 		public void testNestedAndAlternatingUnbalanced() {
-			October9.Solution solution = new October9().new Solution();
+			October09.Solution solution = new October09().new Solution();
 		    String s = "(())))((";
 		    int expected = 4;
 		    assertEquals(expected, solution.minAddToMakeValid(s));

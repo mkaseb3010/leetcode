@@ -1,6 +1,6 @@
 package DailyQuestions;
 
-public class October9 {
+public class October09 {
 	public class Solution {
 	    public int minAddToMakeValid(String s) {
 	        int open = 0;

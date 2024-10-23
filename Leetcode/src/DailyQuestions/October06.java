@@ -1,6 +1,6 @@
 package DailyQuestions;
 
-public class October6 {
+public class October06 {
 	public class Solution {
 	    public boolean areSentencesSimilar(String sentence1, String sentence2) {
 	        String[] s1 = sentence1.split(" ");

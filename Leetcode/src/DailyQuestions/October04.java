@@ -1,7 +1,7 @@
 package DailyQuestions;
 import java.util.*;
 
-public class October4 {
+public class October04 {
 	public class Solution {
 	    public long dividePlayers(int[] skill) {
 	        Arrays.sort(skill);

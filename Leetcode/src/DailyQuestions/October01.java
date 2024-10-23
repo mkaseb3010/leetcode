@@ -1,6 +1,6 @@
 package DailyQuestions;
 
-public class October1 {	
+public class October01 {	
 	public class Solution {
 	    public boolean canArrange(int[] arr, int k) {
 	        int[] rCount = new int[k];

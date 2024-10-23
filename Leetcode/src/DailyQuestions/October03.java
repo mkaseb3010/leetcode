@@ -2,7 +2,7 @@ package DailyQuestions;
 
 import java.util.*;
 
-public class October3 {
+public class October03 {
 	public class Solution {
 	    public int minSubarray(int[] nums, int p) {
 	        int total = 0;

@@ -1,6 +1,6 @@
 package DailyQuestions;
 
-public class October5 {
+public class October05 {
 	public class Solution {
 	    private boolean matches(int[] s1Frequency, int[] window) {
 	        for (int i = 0; i < 26; i++) {

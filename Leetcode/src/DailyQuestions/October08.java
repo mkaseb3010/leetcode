@@ -1,6 +1,6 @@
 package DailyQuestions;
 
-public class October8 {
+public class October08 {
 	public class Solution {
 	    public int minSwaps(String s) {
 	        int min = 0;
