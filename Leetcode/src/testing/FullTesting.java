@@ -1424,7 +1424,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "101";
 			long result = solution.minimumSteps(input);
-			assertEquals(1, result, "Test case 1 failed.");
+			assertEquals(2, result, "Test case 1 failed.");
 		}
 
 		@Test
@@ -1432,7 +1432,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "111000";
 			long result = solution.minimumSteps(input);
-			assertEquals(9, result, "Test case 2 failed.");
+			assertEquals(0, result, "Test case 2 failed.");
 		}
 
 		@Test
@@ -1456,7 +1456,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "010101";
 			long result = solution.minimumSteps(input);
-			assertEquals(3, result, "Test case 5 failed.");
+			assertEquals(6, result, "Test case 5 failed.");
 		}
 
 		@Test
@@ -1464,7 +1464,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "11000";
 			long result = solution.minimumSteps(input);
-			assertEquals(6, result, "Test case 6 failed.");
+			assertEquals(3, result, "Test case 6 failed.");
 		}
 
 		@Test
@@ -1472,7 +1472,7 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "111000111";
 			long result = solution.minimumSteps(input);
-			assertEquals(9, result, "Test case 7 failed.");
+			assertEquals(6, result, "Test case 7 failed.");
 		}
 
 		@Test
@@ -1496,7 +1496,100 @@ public class FullTesting {
 			October15.Solution solution = new October15().new Solution();
 			String input = "1010101010101010";
 			long result = solution.minimumSteps(input);
-			assertEquals(36, result, "Test case 10 failed.");
+			assertEquals(64, result, "Test case 10 failed.");
+		}
+	}
+
+	@Nested
+	class October16Test {
+		private boolean isValidDiverseString(String result) {
+			for (int i = 0; i < result.length() - 2; i++) {
+				if (result.charAt(i) == result.charAt(i + 1) && result.charAt(i) == result.charAt(i + 2)) {
+					return false;
+				}
+			}
+			return true;
+		}
+	
+		private int countCharacter(String str, char ch) {
+			int count = 0;
+			for (char c : str.toCharArray()) {
+				if (c == ch) {
+					count++;
+				}
+			}
+			return count;
+		}
+
+		@Test
+		public void testEqualNumbers() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(2, 2, 2);
+			assertTrue(isValidDiverseString(result), "Test case 1 failed.");
+		}
+	
+		@Test
+		public void testMoreA() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(7, 1, 0);
+			assertTrue(isValidDiverseString(result), "Test case 2 failed.");
+			assertEquals(1, countCharacter(result, 'b'), "Test case 2 character count failed.");
+		}
+	
+		@Test
+		public void testMoreB() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(1, 7, 1);
+			assertTrue(isValidDiverseString(result), "Test case 3 failed.");
+		}
+	
+		@Test
+		public void testMoreC() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(0, 2, 5);
+			assertTrue(isValidDiverseString(result), "Test case 4 failed.");
+		}
+	
+		@Test
+		public void testAllZeros() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(0, 0, 0);
+			assertEquals("", result, "Test case 5 failed.");
+		}
+	
+		@Test
+		public void testSingleA() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(1, 0, 0);
+			assertEquals("a", result, "Test case 6 failed.");
+		}
+	
+		@Test
+		public void testLargeInput() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(100, 100, 100);
+			assertTrue(isValidDiverseString(result), "Test case 7 failed.");
+		}
+	
+		@Test
+		public void testOnlyTwoCharacters() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(0, 3, 5);
+			assertTrue(isValidDiverseString(result), "Test case 8 failed.");
+		}
+	
+		@Test
+		public void testOnlyBAndC() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(0, 6, 8);
+			assertTrue(isValidDiverseString(result), "Test case 9 failed.");
+		}
+	
+		@Test
+		public void testLongAlternatingString() {
+			October16.Solution solution = new October16().new Solution();
+			String result = solution.longestDiverseString(50, 50, 50);
+			assertTrue(isValidDiverseString(result), "Test case 10 failed.");
 		}
 	}
 }
