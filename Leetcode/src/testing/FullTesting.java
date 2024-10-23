@@ -1665,4 +1665,233 @@ public class FullTesting {
 			assertEquals(4312, result, "Test case 10 failed.");
 		}
 	}
+
+	@Nested
+	class October18Test {
+		@Test
+		public void testSimpleCase() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {1, 2, 3};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(5, result, "Test case 1 failed.");
+		}
+
+		@Test
+		public void testAllOnes() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {1, 1, 1};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(7, result, "Test case 2 failed.");
+		}
+
+		@Test
+		public void testLargeORValue() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {3, 5, 7, 9};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(5, result, "Test case 3 failed.");
+		}
+
+		@Test
+		public void testSingleElement() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {5};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(1, result, "Test case 4 failed.");
+		}
+
+		@Test
+		public void testEmptyArray() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(1, result, "Test case 5 failed.");
+		}
+
+		@Test
+		public void testMultipleMaxOrSubsets() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {2, 3, 7};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(4, result, "Test case 6 failed.");
+		}
+
+		@Test
+		public void testArrayWithZeros() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {0, 0, 0, 1};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(8, result, "Test case 7 failed.");
+		}
+
+		@Test
+		public void testLargeInput() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {8, 1, 2, 12};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(2, result, "Test case 8 failed.");
+		}
+
+		@Test
+		public void testArrayWithSameBits() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {7, 7, 7};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(7, result, "Test case 9 failed.");
+		}
+
+		@Test
+		public void testComplexOR() {
+			October18.Solution solution = new October18().new Solution();
+			int[] nums = {5, 1, 3, 7};
+			int result = solution.countMaxOrSubsets(nums);
+			assertEquals(10, result, "Test case 10 failed.");
+		}
+	}
+
+	@Nested
+	class October19Test {
+		@Test
+		public void testBasicCase() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(3, 1);
+			assertEquals('0', result, "Test case 1 failed.");
+		}
+	
+		@Test
+		public void testKInMiddle() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(4, 8);
+			assertEquals('1', result, "Test case 2 failed.");
+		}
+	
+		@Test
+		public void testLastBit() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(4, 15);
+			assertEquals('1', result, "Test case 3 failed.");
+		}
+	
+		@Test
+		public void testFirstBit() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(5, 1);
+			assertEquals('0', result, "Test case 4 failed.");
+		}
+	
+		@Test
+		public void testKGreaterThanMiddle() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(3, 5);
+			assertEquals('0', result, "Test case 5 failed.");
+		}
+	
+		@Test
+		public void testMaximumN() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(20, 524288);
+			assertEquals('1', result, "Test case 6 failed.");
+		}
+	
+		@Test
+		public void testSmallestN() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(1, 1);
+			assertEquals('0', result, "Test case 7 failed.");
+		}
+	
+		@Test
+		public void testMiddleBitInN3() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(3, 4);
+			assertEquals('1', result, "Test case 8 failed.");
+		}
+	
+		@Test
+		public void testNearMiddle() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(4, 7);
+			assertEquals('1', result, "Test case 9 failed.");
+		}
+	
+		@Test
+		public void testLargeK() {
+			October19.Solution solution = new October19().new Solution();
+			char result = solution.findKthBit(10, 1000);
+			assertEquals('1', result, "Test case 10 failed.");
+		}
+	}
+
+	@Nested
+	class October20Test {
+		@Test
+		public void testSingleTrue() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("t");
+			assertTrue(result, "Test case 1 failed.");
+		}
+	
+		@Test
+		public void testSingleFalse() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("f");
+			assertFalse(result, "Test case 2 failed.");
+		}
+	
+		@Test
+		public void testNegation() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("!(t)");
+			assertFalse(result, "Test case 3 failed.");
+		}
+	
+		@Test
+		public void testDoubleNegation() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("!(f)");
+			assertTrue(result, "Test case 4 failed.");
+		}
+	
+		@Test
+		public void testConjunction() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("&(t,t,f)");
+			assertFalse(result, "Test case 5 failed.");
+		}
+	
+		@Test
+		public void testDisjunction() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("|(f,f,t)");
+			assertTrue(result, "Test case 6 failed.");
+		}
+	
+		@Test
+		public void testNestedExpression() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("|(&(t,f,t),!(f),&(t)))");
+			assertTrue(result, "Test case 7 failed.");
+		}
+	
+		@Test
+		public void testComplexExpression() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("&(|(t,f),!(f),&(t))");
+			assertTrue(result, "Test case 8 failed.");
+		}
+	
+		@Test
+		public void testAllFalse() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("&(f,f,f)");
+			assertFalse(result, "Test case 9 failed.");
+		}
+	
+		@Test
+		public void testAllTrue() {
+			October20.Solution solution = new October20().new Solution();
+			boolean result = solution.parseBoolExpr("&(t,t,t)");
+			assertTrue(result, "Test case 10 failed.");
+		}
+	}
 }
