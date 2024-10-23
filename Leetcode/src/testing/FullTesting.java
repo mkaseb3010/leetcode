@@ -1416,4 +1416,87 @@ public class FullTesting {
 			assertEquals(expected, solution.maxKelements(nums, k));
 		}
 	}
+
+	@Nested
+	class October15Test {
+		@Test
+		public void testSimpleCaseWithOnesAndZeros() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "101";
+			long result = solution.minimumSteps(input);
+			assertEquals(1, result, "Test case 1 failed.");
+		}
+
+		@Test
+		public void testNoSwapsNeeded() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "111000";
+			long result = solution.minimumSteps(input);
+			assertEquals(9, result, "Test case 2 failed.");
+		}
+
+		@Test
+		public void testAllZeros() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "000";
+			long result = solution.minimumSteps(input);
+			assertEquals(0, result, "Test case 3 failed.");
+		}
+
+		@Test
+		public void testAllOnes() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "111";
+			long result = solution.minimumSteps(input);
+			assertEquals(0, result, "Test case 4 failed.");
+		}
+
+		@Test
+		public void testAlternatingOnesAndZeros() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "010101";
+			long result = solution.minimumSteps(input);
+			assertEquals(3, result, "Test case 5 failed.");
+		}
+
+		@Test
+		public void testMultipleZerosAfterOnes() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "11000";
+			long result = solution.minimumSteps(input);
+			assertEquals(6, result, "Test case 6 failed.");
+		}
+
+		@Test
+		public void testMultipleOnesAndZeros() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "111000111";
+			long result = solution.minimumSteps(input);
+			assertEquals(9, result, "Test case 7 failed.");
+		}
+
+		@Test
+		public void testSingleOne() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "1";
+			long result = solution.minimumSteps(input);
+			assertEquals(0, result, "Test case 8 failed.");
+		}
+
+		@Test
+		public void testSingleZero() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "0";
+			long result = solution.minimumSteps(input);
+			assertEquals(0, result, "Test case 9 failed.");
+		}
+
+		@Test
+		public void testLongStringAlternating() {
+			October15.Solution solution = new October15().new Solution();
+			String input = "1010101010101010";
+			long result = solution.minimumSteps(input);
+			assertEquals(36, result, "Test case 10 failed.");
+		}
+	}
 }
