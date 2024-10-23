@@ -1894,4 +1894,77 @@ public class FullTesting {
 			assertTrue(result, "Test case 10 failed.");
 		}
 	}
+
+	@Nested
+	class October21Test {
+		@Test
+		public void testSimpleCase() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("abc");
+			assertEquals(3, result, "Test case 1 failed.");
+		}
+
+		@Test
+		public void testRepeatingCharacters() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("aaaa");
+			assertEquals(2, result, "Test case 2 failed.");
+		}
+
+		@Test
+		public void testPalindrome() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("abccba");
+			assertEquals(4, result, "Test case 3 failed.");
+		}
+
+		@Test
+		public void testAllUnique() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("abcdef");
+			assertEquals(6, result, "Test case 4 failed.");
+		}
+
+		@Test
+		public void testRepeatedSubstringPattern() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("ababab");
+			assertEquals(4, result, "Test case 5 failed.");
+		}
+
+		@Test
+		public void testLongString() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("abcdefghijklm");
+			assertEquals(13, result, "Test case 6 failed.");
+		}
+
+		@Test
+		public void testSingleCharacter() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("a");
+			assertEquals(1, result, "Test case 7 failed.");
+		}
+
+		@Test
+		public void testMultipleRepeatedSubstrings() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("abcabc");
+			assertEquals(4, result, "Test case 8 failed.");
+		}
+
+		@Test
+		public void testEmptyString() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("");
+			assertEquals(0, result, "Test case 9 failed.");
+		}
+
+		@Test
+		public void testLongRepeatingCharacters() {
+			October21.Solution solution = new October21().new Solution();
+			int result = solution.maxUniqueSplit("aaaaaaa");
+			assertEquals(3, result, "Test case 10 failed.");
+		}
+	}
 }
