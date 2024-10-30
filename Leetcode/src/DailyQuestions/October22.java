@@ -3,16 +3,16 @@ import java.util.*;
 
 public class October22 {
 	  public static class TreeNode {
-	      int val;
-	      public TreeNode left;
-	      public TreeNode right;
-	      TreeNode() {}
-	      public TreeNode(int val) { this.val = val; }
-	      TreeNode(int val, TreeNode left, TreeNode right) {
-	          this.val = val;
-	          this.left = left;
-	          this.right = right;
-	      }
+	    int val;
+		public TreeNode left;
+		public TreeNode right;
+		TreeNode() {}
+		public TreeNode(int val) { this.val = val; }
+		TreeNode(int val, TreeNode left, TreeNode right) {
+			this.val = val;
+			this.left = left;
+			this.right = right;
+		}
 	  }
 	  
 	public static class Solution {

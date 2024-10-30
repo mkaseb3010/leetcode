@@ -2090,4 +2090,82 @@ public class FullTesting {
             assertEquals(-50, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be -50.");
         }
 	}
+
+	@Nested
+	public class October23Test {
+		@Test
+		public void testReplaceValueInTree_EmptyTree() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = null;
+			assertNull(solution.replaceValueInTree(root), "Should return null for an empty tree");
+		}
+	
+		@Test
+		public void testReplaceValueInTree_SingleNode() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = new TreeNode(1);
+			TreeNode result = solution.replaceValueInTree(root);
+			assertEquals(0, result.val, "Single node value should be set to 0");
+			assertNull(result.left, "Left child should be null");
+			assertNull(result.right, "Right child should be null");
+		}
+	
+		@Test
+		public void testReplaceValueInTree_TwoLevelTree() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+			TreeNode result = solution.replaceValueInTree(root);
+	
+			assertEquals(0, result.val, "Root node should have value 0");
+			assertEquals(3, result.left.val, "Left child should have value 3");
+			assertEquals(2, result.right.val, "Right child should have value 2");
+		}
+	
+		@Test
+		public void testReplaceValueInTree_MultipleLevels() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = new TreeNode(1,
+					new TreeNode(2, new TreeNode(4), new TreeNode(5)),
+					new TreeNode(3, new TreeNode(6), new TreeNode(7))
+			);
+			TreeNode result = solution.replaceValueInTree(root);
+	
+			assertEquals(0, result.val, "Root node should have value 0");
+			assertEquals(12, result.left.val, "Left child of root should have value 12");
+			assertEquals(10, result.right.val, "Right child of root should have value 10");
+			assertEquals(0, result.left.left.val, "Left-left grandchild should have value 0");
+			assertEquals(0, result.left.right.val, "Left-right grandchild should have value 0");
+			assertEquals(0, result.right.left.val, "Right-left grandchild should have value 0");
+			assertEquals(0, result.right.right.val, "Right-right grandchild should have value 0");
+		}
+	
+		@Test
+		public void testReplaceValueInTree_UnbalancedTree() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), null);
+			TreeNode result = solution.replaceValueInTree(root);
+	
+			assertEquals(0, result.val, "Root node should have value 0");
+			assertEquals(4, result.left.val, "Left child of root should have value 4");
+			assertEquals(0, result.left.left.val, "Left-left grandchild should have value 0");
+		}
+	
+		@Test
+		public void testReplaceValueInTree_LargerTree() {
+			October23.Solution solution = new October23.Solution();
+			TreeNode root = new TreeNode(1,
+					new TreeNode(2, new TreeNode(4, new TreeNode(8), null), new TreeNode(5)),
+					new TreeNode(3, new TreeNode(6), new TreeNode(7, null, new TreeNode(9)))
+			);
+			TreeNode result = solution.replaceValueInTree(root);
+	
+			assertEquals(0, result.val, "Root node should have value 0");
+			assertEquals(20, result.left.val, "Left child of root should have value 20");
+			assertEquals(17, result.right.val, "Right child of root should have value 17");
+			assertEquals(9, result.left.left.val, "Left-left grandchild should have value 9");
+			assertEquals(8, result.left.right.val, "Left-right grandchild should have value 8");
+			assertEquals(7, result.right.left.val, "Right-left grandchild should have value 7");
+			assertEquals(0, result.right.right.val, "Right-right grandchild should have value 0");
+		}
+	}	
 }
