@@ -1,6 +1,8 @@
 package testing;
 
 import DailyQuestions.*;
+import DailyQuestions.October23.TreeNode;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
@@ -1966,5 +1968,126 @@ public class FullTesting {
 			int result = solution.maxUniqueSplit("aaaaaaa");
 			assertEquals(3, result, "Test case 10 failed.");
 		}
+	}
+
+	@Nested
+	class October22Test {
+		@Test
+		void testNullTree() {
+			October22.Solution solution = new October22.Solution();
+			assertEquals(-1, solution.kthLargestLevelSum(null, 1), "Should return -1 for a null tree.");
+		}
+
+		@Test
+		void testSingleRootNode() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(10);
+			assertEquals(10, solution.kthLargestLevelSum(root, 1), "The only level sum should be the value of the root.");
+		}
+
+		@Test
+		void testRootWithTwoChildren() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(1);
+			root.left = new TreeNode(2);
+			root.right = new TreeNode(3);
+			assertEquals(5, solution.kthLargestLevelSum(root, 1), "The largest level sum should be 5.");
+			assertEquals(1, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be the root level with value 1.");
+		}
+
+		@Test
+		void testFullBinaryTreeDepth3() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(1);
+			root.left = new TreeNode(2);
+			root.right = new TreeNode(3);
+			root.left.left = new TreeNode(4);
+			root.left.right = new TreeNode(5);
+			root.right.left = new TreeNode(6);
+			root.right.right = new TreeNode(7);
+			
+			assertEquals(22, solution.kthLargestLevelSum(root, 1), "The largest level sum should be 22.");
+			assertEquals(5, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be 5.");
+			assertEquals(1, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be 1.");
+		}
+
+		@Test
+		void testLeftSkewedTree() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(1);
+			root.left = new TreeNode(2);
+			root.left.left = new TreeNode(3);
+			root.left.left.left = new TreeNode(4);
+			
+			assertEquals(4, solution.kthLargestLevelSum(root, 1), "The largest level sum should be 4.");
+			assertEquals(3, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be 3.");
+			assertEquals(2, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be 2.");
+			assertEquals(1, solution.kthLargestLevelSum(root, 4), "The fourth largest level sum should be 1.");
+		}
+
+		@Test
+		void testRightSkewedTree() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(1);
+			root.right = new TreeNode(2);
+			root.right.right = new TreeNode(3);
+			root.right.right.right = new TreeNode(4);
+			
+			assertEquals(4, solution.kthLargestLevelSum(root, 1), "The largest level sum should be 4.");
+			assertEquals(3, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be 3.");
+			assertEquals(2, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be 2.");
+			assertEquals(1, solution.kthLargestLevelSum(root, 4), "The fourth largest level sum should be 1.");
+		}
+
+		@Test
+		void testKOutOfBounds() {
+			October22.Solution solution = new October22.Solution();
+			October22.TreeNode root = new October22.TreeNode(1);
+			root.left = new TreeNode(2);
+			root.right = new TreeNode(3);
+			
+			assertEquals(-1, solution.kthLargestLevelSum(root, 4), "Should return -1 when k is larger than the number of levels.");
+		}
+
+		@Test
+		void testKEqualsNumberOfLevels() {
+			October22.Solution solution = new October22.Solution();
+			TreeNode root = new TreeNode(5);
+			root.left = new TreeNode(6);
+			root.right = new TreeNode(7);
+			root.left.left = new TreeNode(8);
+			
+			assertEquals(5, solution.kthLargestLevelSum(root, 3), "Should return the smallest level sum when k equals the number of levels.");
+		}
+
+		void testComplexTreeWithMixedValues() {
+            October22.Solution solution = new October22.Solution();
+            
+            TreeNode root = new TreeNode(5);
+            root.left = new TreeNode(3);
+            root.right = new TreeNode(8);
+            root.left.left = new TreeNode(2);
+            root.left.right = new TreeNode(4);
+            root.right.left = new TreeNode(7);
+            root.right.right = new TreeNode(10);
+            
+            assertEquals(25, solution.kthLargestLevelSum(root, 1), "The largest level sum should be 25.");
+            assertEquals(11, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be 11.");
+            assertEquals(5, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be 5.");
+        }
+
+		@Test
+        void testTreeWithNegativeValues() {
+            October22.Solution solution = new October22.Solution();
+            
+            TreeNode root = new TreeNode(-10);
+            root.left = new TreeNode(-20);
+            root.right = new TreeNode(-30);
+            root.left.left = new TreeNode(-5);
+            
+            assertEquals(-5, solution.kthLargestLevelSum(root, 1), "The largest level sum should be -5.");
+            assertEquals(-10, solution.kthLargestLevelSum(root, 2), "The second largest level sum should be -10.");
+            assertEquals(-50, solution.kthLargestLevelSum(root, 3), "The third largest level sum should be -50.");
+        }
 	}
 }
