@@ -2170,89 +2170,77 @@ public class FullTesting {
 	}	
 
 	@Nested
-	class October24Test {
+	class October25Test {
 		@Test
-		public void testFlipEquiv_BothNullTrees() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = null;
-			October24.TreeNode root2 = null;
-			assertTrue(solution.flipEquiv(root1, root2), "Both trees are null, should return true");
+		public void testRemoveSubfolders_BasicCase() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/a/b", "/c/d", "/c/d/e", "/c/f"};
+			List<String> expected = Arrays.asList("/a", "/c/d", "/c/f");
+			assertEquals(expected, solution.removeSubfolders(folders), "Basic case with nested folders should return only top-level folders");
 		}
 
 		@Test
-		public void testFlipEquiv_OneNullTree() {
-			October24.Solution solution = new October24().new Solution();
-			TreeNode root1 = new TreeNode(1);
-			TreeNode root2 = null;
-			assertFalse(solution.flipEquiv(root1, root2), "One tree is null, should return false");
+		public void testRemoveSubfolders_NoSubfolders() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/b", "/c"};
+			List<String> expected = Arrays.asList("/a", "/b", "/c");
+			assertEquals(expected, solution.removeSubfolders(folders), "If there are no subfolders, all folders should be returned");
 		}
 
 		@Test
-		public void testFlipEquiv_IdenticalTrees() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), new October24().new TreeNode(3));
-			October24.TreeNode root2 = new October24().new TreeNode(1, new TreeNode(2), new TreeNode(3));
-			assertTrue(solution.flipEquiv(root1, root2), "Identical trees should be flip equivalent");
+		public void testRemoveSubfolders_AllSubfolders() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a/b/c", "/a/b", "/a"};
+			List<String> expected = Collections.singletonList("/a");
+			assertEquals(expected, solution.removeSubfolders(folders), "If all folders are subfolders of the first one, only the top-level folder should be returned");
 		}
 
 		@Test
-		public void testFlipEquiv_DifferentValuesAtRoot() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1);
-			October24.TreeNode root2 = new October24().new TreeNode(2);
-			assertFalse(solution.flipEquiv(root1, root2), "Trees with different values at the root should return false");
+		public void testRemoveSubfolders_OverlappingFolderNames() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/a1", "/a/b", "/a1/b"};
+			List<String> expected = Arrays.asList("/a", "/a1");
+			assertEquals(expected, solution.removeSubfolders(folders), "Overlapping folder names should not affect removal of subfolders");
 		}
 
 		@Test
-		public void testFlipEquiv_MultipleLevelsWithNullNodes() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), null);
-			October24.TreeNode root2 = new October24().new TreeNode(1, null, new October24().new TreeNode(2));
-			assertTrue(solution.flipEquiv(root1, root2), "Trees with null nodes in equivalent positions should return true");
+		public void testRemoveSubfolders_SingleFolder() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a"};
+			List<String> expected = Collections.singletonList("/a");
+			assertEquals(expected, solution.removeSubfolders(folders), "Single folder should be returned as it has no subfolders");
 		}
 
 		@Test
-		public void testFlipEquiv_AsymmetricTrees() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), new October24().new TreeNode(3));
-			October24.TreeNode root2 = new October24().new TreeNode(1, new October24().new TreeNode(3), null);
-			assertFalse(solution.flipEquiv(root1, root2), "Asymmetric trees should return false");
+		public void testRemoveSubfolders_MultipleNestedLevels() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/a/b", "/a/b/c", "/a/b/c/d", "/e", "/e/f"};
+			List<String> expected = Arrays.asList("/a", "/e");
+			assertEquals(expected, solution.removeSubfolders(folders), "Multiple nested levels should result in only top-level folders being returned");
 		}
 
 		@Test
-		public void testFlipEquiv_FullTreeWithOneMissingLeaf() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1,
-				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5)),
-				new October24().new TreeNode(3, new October24().new TreeNode(6), new October24().new TreeNode(7))
-			);
-			October24.TreeNode root2 = new October24().new TreeNode(1,
-				new October24().new TreeNode(3, new October24().new TreeNode(6), null),
-				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5))
-			);
-			assertFalse(solution.flipEquiv(root1, root2), "Trees where one is missing a leaf should return false");
+		public void testRemoveSubfolders_FolderWithTrailingSlash() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/a/b/", "/a/b/c", "/a/b/c/"};
+			List<String> expected = Collections.singletonList("/a");
+			assertEquals(expected, solution.removeSubfolders(folders), "Trailing slashes should be ignored in determining subfolder relationships");
 		}
 
 		@Test
-		public void testFlipEquiv_TreeWithSingleChildFlip() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), null);
-			October24.TreeNode root2 = new October24().new TreeNode(1, null, new October24().new TreeNode(2));
-			assertTrue(solution.flipEquiv(root1, root2), "Trees with a single child on opposite sides should return true");
+		public void testRemoveSubfolders_UnorderedFolders() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/c/d", "/a", "/c", "/c/d/e", "/a/b"};
+			List<String> expected = Arrays.asList("/a", "/c");
+			assertEquals(expected, solution.removeSubfolders(folders), "Unordered folders should still return only top-level folders");
 		}
 
 		@Test
-		public void testFlipEquiv_LargeIdenticalStructureWithFlips() {
-			October24.Solution solution = new October24().new Solution();
-			October24.TreeNode root1 = new October24().new TreeNode(1,
-				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5)),
-				new October24().new TreeNode(3, new October24().new TreeNode(6), new October24().new TreeNode(7))
-			);
-			October24.TreeNode root2 = new October24().new TreeNode(1,
-				new October24().new TreeNode(3, new October24().new TreeNode(7), new October24().new TreeNode(6)),
-				new October24().new TreeNode(2, new October24().new TreeNode(5), new October24().new TreeNode(4))
-			);
-			assertTrue(solution.flipEquiv(root1, root2), "Larger trees with multiple flips should return true");
+		public void testRemoveSubfolders_MultipleRootFolders() {
+			October25.Solution solution = new October25().new Solution();
+			String[] folders = {"/a", "/a/b", "/b", "/b/c", "/c/d"};
+			List<String> expected = Arrays.asList("/a", "/b", "/c/d");
+			assertEquals(expected, solution.removeSubfolders(folders), "Multiple root folders should each return only their top-level or non-nested subfolder");
 		}
 	}
 }
