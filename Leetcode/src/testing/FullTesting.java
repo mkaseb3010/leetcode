@@ -2441,4 +2441,91 @@ public class FullTesting {
 			assertArrayEquals(expected, solution.treeQueries(root, queries));
 		}
 	}
+
+	@Nested
+	class October27Test {
+		@Test
+		void testSingleOne() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {{1}};
+			assertEquals(1, solution.countSquares(matrix), "Single 1x1 matrix with a 1 should return 1.");
+		}
+
+		@Test
+		void testSingleZero() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {{0}};
+			assertEquals(0, solution.countSquares(matrix), "Single 1x1 matrix with a 0 should return 0.");
+		}
+
+		@Test
+		void testRowOfOnes() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {{1, 1, 1, 1}};
+			assertEquals(4, solution.countSquares(matrix), "A row with all ones should return the count of each 1x1 square.");
+		}
+
+		@Test
+		void testColumnOfOnes() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {{1}, {1}, {1}, {1}};
+			assertEquals(4, solution.countSquares(matrix), "A column with all ones should return the count of each 1x1 square.");
+		}
+
+		@Test
+		void testSmall2x2Square() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {
+				{1, 1},
+				{1, 1}
+			};
+			assertEquals(5, solution.countSquares(matrix), "A 2x2 square of ones should have 4 single 1x1 squares and 1 2x2 square, totaling 5.");
+		}
+
+		@Test
+		void testMixedMatrix() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {
+				{1, 0, 1},
+				{1, 1, 0},
+				{1, 1, 1}
+			};
+			assertEquals(8, solution.countSquares(matrix), "Matrix with a mix of ones and zeros should correctly count all squares.");
+		}
+
+		@Test
+		void testLargeSquare() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {
+				{1, 1, 1},
+				{1, 1, 1},
+				{1, 1, 1}
+			};
+			assertEquals(14, solution.countSquares(matrix), "A 3x3 matrix of all ones should return the sum of all 1x1, 2x2, and 3x3 squares.");
+		}
+
+		@Test
+		void testRectangularMatrixWithZeros() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = {
+				{1, 1, 0, 1},
+				{1, 1, 1, 1},
+				{0, 1, 1, 1},
+				{1, 0, 1, 1}
+			};
+			assertEquals(17, solution.countSquares(matrix), "Mixed rectangular matrix should correctly count all squares.");
+		}
+
+		@Test
+		void testLargeMatrix() {
+			October27.Solution solution = new October27().new Solution();
+			int[][] matrix = new int[100][100];
+			for (int i = 0; i < 100; i++) {
+				for (int j = 0; j < 100; j++) {
+					matrix[i][j] = 1;
+				}
+			}
+			assertEquals(338350, solution.countSquares(matrix), "Large matrix with all ones should handle high counts of squares.");
+		}
+	}
 }
