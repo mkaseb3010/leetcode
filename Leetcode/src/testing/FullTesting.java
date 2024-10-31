@@ -1,15 +1,11 @@
 package testing;
 
 import DailyQuestions.*;
-import DailyQuestions.October23.TreeNode;
-
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.*;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.TestInstance;
+import java.util.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class FullTesting {
@@ -2709,6 +2705,79 @@ public class FullTesting {
 				}
 			}
 			assertEquals(9, solution.maxMoves(grid), "Large grid with increasing values diagonally should allow maximum 9 moves.");
+		}
+	}
+
+	@Nested
+	class October30Test {
+		@Test
+		void testTooSmallToBeMountain() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 2};
+			assertEquals(2, solution.minimumMountainRemovals(nums), "Array too small to form a mountain should return 0.");
+		}
+
+		@Test
+		void testNoMountainStructure() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 2, 3, 4, 5};
+			assertEquals(5, solution.minimumMountainRemovals(nums), "Fully increasing sequence requires all but one element removed.");
+		}
+
+		@Test
+		void testAlreadyMountainArray() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {2, 3, 4, 3, 2};
+			assertEquals(0, solution.minimumMountainRemovals(nums), "Array already a mountain should need no removals.");
+		}
+
+		@Test
+		void testSinglePeakMountainArray() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 3, 1};
+			assertEquals(0, solution.minimumMountainRemovals(nums), "Array with single peak already forms a mountain.");
+		}
+
+		@Test
+		void testMultiplePossiblePeaks() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 2, 3, 4, 3, 2, 1, 5, 6, 4, 3};
+			assertEquals(3, solution.minimumMountainRemovals(nums), "Multiple possible peaks should allow removing 3 elements to form a mountain.");
+		}
+
+		@Test
+		void testIncreasingAndDecreasingWithExtraElements() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {2, 1, 4, 7, 3, 2, 5};
+			assertEquals(2, solution.minimumMountainRemovals(nums), "Removing 2 elements should leave a mountain.");
+		}
+
+		@Test
+		void testMixedArray() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {3, 5, 6, 4, 3, 2, 7, 8, 2, 1};
+			assertEquals(3, solution.minimumMountainRemovals(nums), "Mixed array should require 5 removals to form a mountain.");
+		}
+
+		@Test
+		void testLongIncreasingDecreasingWithSinglePeak() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1};
+			assertEquals(0, solution.minimumMountainRemovals(nums), "Already a mountain with a long peak, no removals needed.");
+		}
+
+		@Test
+		void testLongDecreasingArray() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+			assertEquals(10, solution.minimumMountainRemovals(nums), "Fully decreasing array needs all but one removed.");
+		}
+
+		@Test
+		void testArrayWithDuplicateElements() {
+			October30.Solution solution = new October30().new Solution();
+			int[] nums = {1, 2, 2, 3, 4, 3, 2, 1};
+			assertEquals(1, solution.minimumMountainRemovals(nums), "Array with duplicates requires removing 2 elements for a mountain.");
 		}
 	}
 }
