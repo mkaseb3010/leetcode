@@ -2780,4 +2780,87 @@ public class FullTesting {
 			assertEquals(1, solution.minimumMountainRemovals(nums), "Array with duplicates requires removing 2 elements for a mountain.");
 		}
 	}
+
+	@Nested
+	class October31Test {
+		@Test
+		void testSingleRobotSingleFactory() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(2);
+			int[][] factory = {{3, 1}};
+			assertEquals(1, solution.minimumTotalDistance(robot, factory), "Single robot and single factory with close position.");
+		}
+
+		@Test
+		void testSingleRobotMultipleFactories() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(5);
+			int[][] factory = {{2, 1}, {8, 1}};
+			assertEquals(3, solution.minimumTotalDistance(robot, factory), "Robot closest to one of the multiple factories.");
+		}
+
+		@Test
+		void testMultipleRobotsSingleFactoryWithCapacity() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 4, 6);
+			int[][] factory = {{5, 3}};
+			assertEquals(6, solution.minimumTotalDistance(robot, factory), "All robots should be assigned to a single factory with enough capacity.");
+		}
+
+		@Test
+		void testMultipleRobotsMultipleFactories() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 3, 6);
+			int[][] factory = {{2, 1}, {5, 2}};
+			assertEquals(4, solution.minimumTotalDistance(robot, factory), "Optimal assignments across multiple factories to minimize distance.");
+		}
+
+		@Test
+		void testFactoryWithZeroCapacity() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 2, 3);
+			int[][] factory = {{2, 0}};  
+			assertEquals(Long.MAX_VALUE / 2, solution.minimumTotalDistance(robot, factory), "Factory with zero capacity cannot be used.");
+		}
+
+		@Test
+		void testAllRobotsAssignedToNearestFactory() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 10, 20);
+			int[][] factory = {{0, 1}, {15, 2}};
+			assertEquals(11, solution.minimumTotalDistance(robot, factory), "Optimal assignment based on nearest factory distance.");
+		}
+
+		@Test
+		void testLargeDistanceValues() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(100000, 200000, 300000);
+			int[][] factory = {{150000, 2}, {250000, 2}};
+			assertEquals(150000, solution.minimumTotalDistance(robot, factory), "Handles large distances effectively.");
+		}
+
+		@Test
+		void testMultipleFactoriesWithExcessCapacity() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 2, 3);
+			int[][] factory = {{0, 5}, {10, 5}};
+			assertEquals(6, solution.minimumTotalDistance(robot, factory), "Optimal assignment even when factory capacity exceeds the number of robots.");
+		}
+
+		@Test
+		void testEqualRobotAndFactoryPositions() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(1, 5, 10);
+			int[][] factory = {{1, 1}, {5, 1}, {10, 1}};
+			assertEquals(0, solution.minimumTotalDistance(robot, factory), "Each robot exactly matches a factory position.");
+		}
+
+		@Test
+		void testRobotFarFromAllFactories() {
+			October31.Solution solution = new October31().new Solution();
+			List<Integer> robot = Arrays.asList(100);
+			int[][] factory = {{1, 1}, {2, 1}, {3, 1}};
+			assertEquals(97, solution.minimumTotalDistance(robot, factory), "Robot has no close factory, resulting in large distance.");
+		}
+	}
 }
