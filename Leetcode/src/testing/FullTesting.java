@@ -2170,6 +2170,93 @@ public class FullTesting {
 	}	
 
 	@Nested
+	class October24Test {
+		@Test
+		public void testFlipEquiv_BothNullTrees() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = null;
+			October24.TreeNode root2 = null;
+			assertTrue(solution.flipEquiv(root1, root2), "Both trees are null, should return true");
+		}
+
+		@Test
+		public void testFlipEquiv_OneNullTree() {
+			October24.Solution solution = new October24().new Solution();
+			TreeNode root1 = new TreeNode(1);
+			TreeNode root2 = null;
+			assertFalse(solution.flipEquiv(root1, root2), "One tree is null, should return false");
+		}
+
+		@Test
+		public void testFlipEquiv_IdenticalTrees() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), new October24().new TreeNode(3));
+			October24.TreeNode root2 = new October24().new TreeNode(1, new TreeNode(2), new TreeNode(3));
+			assertTrue(solution.flipEquiv(root1, root2), "Identical trees should be flip equivalent");
+		}
+
+		@Test
+		public void testFlipEquiv_DifferentValuesAtRoot() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1);
+			October24.TreeNode root2 = new October24().new TreeNode(2);
+			assertFalse(solution.flipEquiv(root1, root2), "Trees with different values at the root should return false");
+		}
+
+		@Test
+		public void testFlipEquiv_MultipleLevelsWithNullNodes() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), null);
+			October24.TreeNode root2 = new October24().new TreeNode(1, null, new October24().new TreeNode(2));
+			assertTrue(solution.flipEquiv(root1, root2), "Trees with null nodes in equivalent positions should return true");
+		}
+
+		@Test
+		public void testFlipEquiv_AsymmetricTrees() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), new October24().new TreeNode(3));
+			October24.TreeNode root2 = new October24().new TreeNode(1, new October24().new TreeNode(3), null);
+			assertFalse(solution.flipEquiv(root1, root2), "Asymmetric trees should return false");
+		}
+
+		@Test
+		public void testFlipEquiv_FullTreeWithOneMissingLeaf() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1,
+				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5)),
+				new October24().new TreeNode(3, new October24().new TreeNode(6), new October24().new TreeNode(7))
+			);
+			October24.TreeNode root2 = new October24().new TreeNode(1,
+				new October24().new TreeNode(3, new October24().new TreeNode(6), null),
+				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5))
+			);
+			assertFalse(solution.flipEquiv(root1, root2), "Trees where one is missing a leaf should return false");
+		}
+
+		@Test
+		public void testFlipEquiv_TreeWithSingleChildFlip() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1, new October24().new TreeNode(2), null);
+			October24.TreeNode root2 = new October24().new TreeNode(1, null, new October24().new TreeNode(2));
+			assertTrue(solution.flipEquiv(root1, root2), "Trees with a single child on opposite sides should return true");
+		}
+
+		@Test
+		public void testFlipEquiv_LargeIdenticalStructureWithFlips() {
+			October24.Solution solution = new October24().new Solution();
+			October24.TreeNode root1 = new October24().new TreeNode(1,
+				new October24().new TreeNode(2, new October24().new TreeNode(4), new October24().new TreeNode(5)),
+				new October24().new TreeNode(3, new October24().new TreeNode(6), new October24().new TreeNode(7))
+			);
+			October24.TreeNode root2 = new October24().new TreeNode(1,
+				new October24().new TreeNode(3, new October24().new TreeNode(7), new October24().new TreeNode(6)),
+				new October24().new TreeNode(2, new October24().new TreeNode(5), new October24().new TreeNode(4))
+			);
+			assertTrue(solution.flipEquiv(root1, root2), "Larger trees with multiple flips should return true");
+		}
+	}
+
+	@Nested
 	class October25Test {
 		@Test
 		public void testRemoveSubfolders_BasicCase() {
