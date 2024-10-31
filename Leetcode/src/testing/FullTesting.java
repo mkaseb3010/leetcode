@@ -2528,4 +2528,77 @@ public class FullTesting {
 			assertEquals(338350, solution.countSquares(matrix), "Large matrix with all ones should handle high counts of squares.");
 		}
 	}
+
+	@Nested
+	class October28Test {
+		@Test
+		void testSingleElement() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {4};
+			assertEquals(-1, solution.longestSquareStreak(nums), "Single element cannot form a square streak.");
+		}
+
+		@Test
+		void testNoSquareSequence() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {1, 3, 7, 10};
+			assertEquals(-1, solution.longestSquareStreak(nums), "No square sequence present.");
+		}
+
+		@Test
+		void testSimpleSquareStreak() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {2, 4, 16};
+			assertEquals(3, solution.longestSquareStreak(nums), "Sequence 2 → 4 → 16 has a streak of 3.");
+		}
+
+		@Test
+		void testMultipleSquareStreaks() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {2, 4, 16, 3, 9, 27, 81};
+			assertEquals(3, solution.longestSquareStreak(nums), "Sequence 3 → 9 → 81 has a streak of 4.");
+		}
+
+		@Test
+		void testMixedNumbersWithNoStreak() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {5, 10, 25, 50, 100};
+			assertEquals(2, solution.longestSquareStreak(nums), "No consecutive square sequence in mixed numbers.");
+		}
+
+		@Test
+		void testComplexStreakWithDuplicates() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {2, 4, 4, 16, 16, 256};
+			assertEquals(4, solution.longestSquareStreak(nums), "Sequence 2 → 4 → 16 → 256 has a streak of 4, duplicates should not affect the streak.");
+		}
+
+		@Test
+		void testLargeNumbers() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {10000, 100, 10, 1000000};
+			assertEquals(3, solution.longestSquareStreak(nums), "Sequence 10 → 100 → 10000 has a streak of 3.");
+		}
+
+		@Test
+		void testMixedValidAndInvalidSequences() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {1, 3, 9, 2, 4, 8, 16};
+			assertEquals(3, solution.longestSquareStreak(nums), "Sequence 2 → 4 → 16 has a streak of 3.");
+		}
+
+		@Test
+		void testMultipleDisjointSquareStreaks() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {1, 1, 2, 4, 16, 3, 9, 27};
+			assertEquals(3, solution.longestSquareStreak(nums), "The longest streak among disjoint sequences is 3.");
+		}
+
+		@Test
+		void testSquareRootSequence() {
+			October28.Solution solution = new October28().new Solution();
+			int[] nums = {16, 4, 2};
+			assertEquals(3, solution.longestSquareStreak(nums), "Sequence in reverse order does not count as valid.");
+		}
+	}
 }
