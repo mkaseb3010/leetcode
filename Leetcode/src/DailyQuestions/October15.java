@@ -1,5 +1,4 @@
 package DailyQuestions;
-import java.util.*;
 
 public class October15 {
 	public class Solution {
