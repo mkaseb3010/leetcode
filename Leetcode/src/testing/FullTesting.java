@@ -2601,4 +2601,114 @@ public class FullTesting {
 			assertEquals(3, solution.longestSquareStreak(nums), "Sequence in reverse order does not count as valid.");
 		}
 	}
+
+	@Nested
+	class October29Test {
+		@Test
+		void testSingleCellGrid() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {{1}};
+			assertEquals(0, solution.maxMoves(grid), "Single cell grid should return 0 moves.");
+		}
+
+		@Test
+		void testSingleRowIncreasing() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {{1, 2, 3, 4}};
+			assertEquals(3, solution.maxMoves(grid), "Single row with increasing values should allow 3 moves.");
+		}
+
+		@Test
+		void testSingleRowDecreasing() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {{4, 3, 2, 1}};
+			assertEquals(0, solution.maxMoves(grid), "Single row with decreasing values should allow 0 moves.");
+		}
+
+		@Test
+		void testSingleColumn() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {{1}, {2}, {3}, {4}};
+			assertEquals(0, solution.maxMoves(grid), "Single column should return 0 moves, as no right moves are possible.");
+		}
+
+		@Test
+		void testSquareGrid() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {
+				{1, 2, 3},
+				{4, 5, 6},
+				{7, 8, 9}
+			};
+			assertEquals(2, solution.maxMoves(grid), "Square grid with increasing values allows maximum 2 moves.");
+		}
+
+		@Test
+		void testTallRectangularGrid() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {
+				{1, 3, 5},
+				{2, 4, 6},
+				{3, 5, 7},
+				{4, 6, 8}
+			};
+			assertEquals(2, solution.maxMoves(grid), "Tall grid with increasing diagonal values should allow 2 moves.");
+		}
+
+		@Test
+		void testWideRectangularGrid() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {
+				{1, 2, 3, 4},
+				{2, 3, 4, 5}
+			};
+			assertEquals(3, solution.maxMoves(grid), "Wide grid with increasing values should allow maximum moves across the row.");
+		}
+
+		@Test
+		void testMixedGridWithNoMoves() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {
+				{5, 4, 3},
+				{4, 3, 2},
+				{3, 2, 1}
+			};
+			assertEquals(0, solution.maxMoves(grid), "Grid with decreasing values in all directions should allow 0 moves.");
+		}
+
+		@Test
+		void testGridWithPossibleDiagonalMoves() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = {
+				{1, 2, 3},
+				{2, 3, 4},
+				{1, 4, 5}
+			};
+			assertEquals(2, solution.maxMoves(grid), "Grid with diagonal possibilities should allow moves through diagonal paths.");
+		}
+
+		@Test
+		void testLargeGridWithAllSameValues() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = new int[10][10];
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 10; j++) {
+					grid[i][j] = 1;
+				}
+			}
+			assertEquals(0, solution.maxMoves(grid), "Grid with all same values should allow 0 moves.");
+		}
+
+		@Test
+		void testLargeGridWithIncreasingValues() {
+			October29.Solution solution = new October29().new Solution();
+			int[][] grid = new int[10][10];
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 10; j++) {
+					grid[i][j] = i + j;
+				}
+			}
+			assertEquals(9, solution.maxMoves(grid), "Large grid with increasing values diagonally should allow maximum 9 moves.");
+		}
+	}
 }
