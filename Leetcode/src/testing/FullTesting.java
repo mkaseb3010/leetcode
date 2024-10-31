@@ -2330,4 +2330,115 @@ public class FullTesting {
 			assertEquals(expected, solution.removeSubfolders(folders), "Multiple root folders should each return only their top-level or non-nested subfolder");
 		}
 	}
+
+	@Nested
+	class October26Test {
+		@Test
+		void testSingleRootNode() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1);
+			int[] queries = {1}; 
+			int[] expected = {0};  
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testTwoNodesLeftOnly() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2), null);
+			int[] queries = {1, 2};
+			int[] expected = {1, 0};  
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testTwoNodesRightOnly() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, null, new TreeNode(3));
+			int[] queries = {1, 3};
+			int[] expected = {1, 0};  // Root has depth 1; right child has depth 0
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testBalancedTreeDepth2() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+			int[] queries = {1, 2, 3};
+			int[] expected = {1, 0, 0};  // Root has depth 1, both children are at depth 0
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testLeftSkewedTreeDepth3() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3), null), null);
+			int[] queries = {1, 2, 3};
+			int[] expected = {2, 1, 0};  // Depths increase from the bottom to root
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testRightSkewedTreeDepth3() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, null, new TreeNode(2, null, new TreeNode(3)));
+			int[] queries = {1, 2, 3};
+			int[] expected = {2, 1, 0};  // Similar to left-skewed but on the right side
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testComplexTreeWithMixedStructure() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, 
+							  new TreeNode(2, new TreeNode(4), new TreeNode(5)), 
+							  new TreeNode(3, null, new TreeNode(6, new TreeNode(7), null))
+						  );
+			int[] queries = {1, 2, 3, 4, 5, 6, 7};
+			int[] expected = {3, 2, 1, 0, 0, 1, 0};  // Depths calculated based on the mixed structure
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testFullBinaryTreeDepth3() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1,
+							  new TreeNode(2, new TreeNode(4), new TreeNode(5)),
+							  new TreeNode(3, new TreeNode(6), new TreeNode(7))
+						  );
+			int[] queries = {1, 2, 3, 4, 5, 6, 7};
+			int[] expected = {2, 1, 1, 0, 0, 0, 0};  // Perfectly balanced tree, so depths are equal across levels
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testQueryNonExistentNode() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+			int[] queries = {4};  // Node 4 doesn't exist
+			int[] expected = {0};  // Assuming that queries for non-existent nodes return 0
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testRepeatedQueries() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3));
+			int[] queries = {2, 2, 4};
+			int[] expected = {1, 1, 0};  // Should handle repeated queries correctly
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	
+		@Test
+		void testDeepTreeDepth4() {
+			October26.Solution solution = new October26().new Solution();
+			TreeNode root = new TreeNode(1, 
+							  new TreeNode(2, 
+								  new TreeNode(3, 
+									  new TreeNode(4), null), null), null);
+			int[] queries = {1, 2, 3, 4};
+			int[] expected = {3, 2, 1, 0};  // Each level deeper has higher depth
+			assertArrayEquals(expected, solution.treeQueries(root, queries));
+		}
+	}
 }

@@ -1,8 +1,6 @@
 package DailyQuestions;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class October25 {
     public class Solution {
