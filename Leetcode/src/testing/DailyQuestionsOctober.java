@@ -12,7 +12,7 @@ import java.util.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class DailyQuestionsOctober {
 	
-	//Test cases for daily questions
+	//Test cases for october daily questions
 	@Nested
 	class October1Test {
 		@Test
