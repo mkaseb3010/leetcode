@@ -99,4 +99,85 @@ public class DailyQuestionsNovember {
             assertEquals("aabb", solution.makeFancyString("aaaabbbbbb"));
         }
     }
+
+    @Nested
+    class November02Test {
+        @Test
+        void testSingleWordCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertTrue(solution.isCircularSentence("level"));
+        }
+
+        @Test
+        void testSingleWordNonCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("hello"));
+        }
+
+        @Test
+        void testTwoWordCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("hello odd"));
+        }
+
+        @Test
+        void testTwoWordNonCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("hello world"));
+        }
+
+        @Test
+        void testMultipleWordCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("go on never rest stop"));
+        }
+
+        @Test
+        void testMultipleWordNonCircularSentence() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("go on never rest here"));
+        }
+
+        @Test
+        void testSentenceWithRepeatedWordsCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("abc cba abc"));
+        }
+
+        @Test
+        void testSentenceWithRepeatedWordsNonCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("abc def abc"));
+        }
+
+        @Test
+        void testSentenceWithSingleCharacterWordsCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertTrue(solution.isCircularSentence("a a a a"));
+        }
+
+        @Test
+        void testSentenceWithSingleCharacterWordsNonCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("a b c a"));
+        }
+
+        @Test
+        void testSentenceWithMixedCaseCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("Apple ends silently top"));
+        }
+
+        @Test
+        void testSentenceWithMixedCaseNonCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("Apple ends here stop"));
+        }
+
+        @Test
+        void testSentenceWithTrailingSpacesCircular() {
+            November02.Solution solution = new November02().new Solution();
+            assertFalse(solution.isCircularSentence("end now we end "));
+        }
+    }
 }
