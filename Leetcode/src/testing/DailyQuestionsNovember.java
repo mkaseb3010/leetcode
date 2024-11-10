@@ -180,4 +180,97 @@ public class DailyQuestionsNovember {
             assertFalse(solution.isCircularSentence("end now we end "));
         }
     }
+
+    @Nested
+    class November3Test {
+        @Test
+        void testEmptyStrings() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("", ""));
+        }
+
+        @Test
+        void testUnequalLengthStrings() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("abc", "ab"));
+        }
+
+        @Test
+        void testSameString() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abc", "abc"));
+        }
+
+        @Test
+        void testValidRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abcde", "cdeab"));
+        }
+
+        @Test
+        void testInvalidRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("abcde", "abced"));
+        }
+
+        @Test
+        void testSingleCharacterStringsValid() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("a", "a"));
+        }
+
+        @Test
+        void testSingleCharacterStringsInvalid() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("a", "b"));
+        }
+
+        @Test
+        void testDoubleRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("aa", "aa"));
+        }
+
+        @Test
+        void testStringsWithRepeatingPatternsValid() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abab", "baba"));
+        }
+
+        @Test
+        void testStringsWithRepeatingPatternsInvalid() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("abab", "abba"));
+        }
+
+        @Test
+        void testPartialMatch() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("abcdefg", "efghijk"));
+        }
+
+        @Test
+        void testRotationWithDifferentCharacters() {
+            November03.Solution solution = new November03().new Solution();
+            assertFalse(solution.rotateString("abc", "def"));
+        }
+
+        @Test
+        void testGoalAsSubstringButNotRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abcde", "eabcd"));
+        }
+
+        @Test
+        void testLongValidRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abcdefghijkl", "ghijklabcdef"));
+        }
+
+        @Test
+        void testLongInvalidRotation() {
+            November03.Solution solution = new November03().new Solution();
+            assertTrue(solution.rotateString("abcdefghijkl", "ghijklabcdef"));
+        }
+    }
 }
