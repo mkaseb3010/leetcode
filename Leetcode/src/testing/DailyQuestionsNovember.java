@@ -273,4 +273,91 @@ public class DailyQuestionsNovember {
             assertTrue(solution.rotateString("abcdefghijkl", "ghijklabcdef"));
         }
     }
+
+    @Nested
+    class November04Test {
+        @Test
+        void testEmptyString() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("", solution.compressedString(""));
+        }
+    
+        @Test
+        void testSingleCharacterString() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("1a", solution.compressedString("a"));
+        }
+    
+        @Test
+        void testStringWithNoRepeatingCharacters() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("1a1b1c", solution.compressedString("abc"));
+        }
+    
+        @Test
+        void testStringWithRepeatingCharactersBelowLimit() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("2a3b", solution.compressedString("aabbb"));
+        }
+    
+        @Test
+        void testStringWithRepeatingCharactersAtLimit() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9a", solution.compressedString("aaaaaaaaa"));
+        }
+    
+        @Test
+        void testStringWithRepeatingCharactersExceedingLimit() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9a2a", solution.compressedString("aaaaaaaaaaa"));
+        }
+    
+        @Test
+        void testStringWithMultipleGroupsOfRepeatingCharacters() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9a9a1a", solution.compressedString("aaaaaaaaaaaaaaaaaaa"));
+        }
+    
+        @Test
+        void testStringWithMixedRepeatingAndNonRepeatingCharacters() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("1a9b1c", solution.compressedString("abbbbbbbbbc"));
+        }
+    
+        @Test
+        void testStringWithAllSameCharacter() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9a9a9a", solution.compressedString("aaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+        }
+    
+        @Test
+        void testStringWithAlternatingCharacters() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("1a1b1a1b1a1b1a1b1a1b1a", solution.compressedString("abababababa"));
+        }
+    
+        @Test
+        void testStringWithMultipleDifferentRepeatingPatterns() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("3a2b3c", solution.compressedString("aaabbccc"));
+        }
+    
+        @Test
+        void testStringWithEdgeCaseLimit() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9z", solution.compressedString("zzzzzzzzz"));
+        }
+    
+        @Test
+        void testStringWithShortRepeatingCharacters() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("1x2y1z", solution.compressedString("xyyz"));
+        }
+    
+        @Test
+        void testLongStringWithMultipleLimitGroups() {
+            November04.Solution solution = new November04().new Solution();
+            assertEquals("9a9a1a", solution.compressedString("aaaaaaaaaaaaaaaaaaa"));
+        }
+    }
 }
