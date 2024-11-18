@@ -1,6 +1,4 @@
 package DailyQuestionsOctober;
-import java.util.*;
-
 public class October24 {
 
     public class TreeNode {
