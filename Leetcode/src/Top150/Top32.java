@@ -1,58 +1,63 @@
 package Top150;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Top32 {
     public class Solution {
-        public String minWindow(String s, String t) {
-            if (s == null || s.length() == 0 || t == null || t.length() == 0) {
-                return "";
+        public List<Integer> findSubstring(String s, String[] words) {
+            List<Integer> result = new ArrayList<>();
+            if (s == null || words == null || words.length == 0) {
+                return result;
             }
 
-            Map<Character, Integer> tFrequency = new HashMap<>();
-            
-            for (char ch : t.toCharArray()) {
-                tFrequency.put(ch, tFrequency.getOrDefault(ch, 0) + 1);
+            int wordLen = words[0].length();
+            int num = words.length;
+            int conc = wordLen * num;
+
+            if (s.length() < conc) {
+                return result;
             }
 
-            int left = 0;
-            int right = 0;
-            int required = tFrequency.size();
-            int formed = 0;
-            Map<Character, Integer> window = new HashMap<>();
-            int[] result = {-1, 0, 0};
+            Map<String, Integer> wordMap = new HashMap<>();
+            for (String word : words) {
+                wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
+            }
 
-            while (right < s.length()) {
-                char ch = s.charAt(right);
-                window.put(ch, window.getOrDefault(ch, 0) + 1);
+            for (int i = 0; i < wordLen; i++) {
+                int left = i;
+                int right = i;
+                int count = 0;
+                Map<String, Integer> seenMap = new HashMap<>();
 
-                if (tFrequency.containsKey(ch) && window.get(ch).intValue() == tFrequency.get(ch).intValue()) {
-                    formed++;
-                }
+                while (right + wordLen <= s.length()) {
+                    String word = s.substring(right, right + wordLen);
+                    right += wordLen;
 
-                while (left <= right && formed == required) {
-                    ch = s.charAt(left);
+                    if (wordMap.containsKey(word)) {
+                        seenMap.put(word, seenMap.getOrDefault(word, 0) + 1);
+                        count++;
 
-                    if(result[0] == -1 || right - left + 1 < result[0]) {
-                        result[0] = right - left + 1;
-                        result[1] = left;
-                        result[2] = right;
+                        while (seenMap.get(word) > wordMap.get(word)) {
+                            String leftWord = s.substring(left, left + wordLen);
+                            seenMap.put(leftWord, seenMap.get(leftWord) - 1);
+                            count--;
+                            left += wordLen;
+                        }
+
+                        if (count == num) {
+                            result.add(left);
+                        }
+                    } else {
+                        seenMap.clear();
+                        count = 0;
+                        left = right;
                     }
-
-                    window.put(ch, window.get(ch) - 1);
-                    if (tFrequency.containsKey(ch) && window.get(ch).intValue() < tFrequency.get(ch).intValue()) {
-                        formed--;
-                    }
-                    left++;
                 }
-                right++;
             }
-            if (result[0] == -1) {
-                return "";
-            }else {
-                return s.substring(result[1], result[2] + 1);
-            }
+            return result;
         }
     }
 }
