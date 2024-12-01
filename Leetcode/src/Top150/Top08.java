@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top8 {
+public class Top08 {
     public class Solution {
         public int maxProfit(int[] prices) {
             int max = 0;

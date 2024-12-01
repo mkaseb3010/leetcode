@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top5 {
+public class Top05 {
     public class Solution {
         public int majorityElement(int[] nums) {
             int count = 0;

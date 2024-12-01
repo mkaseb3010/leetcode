@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top6 {
+public class Top06 {
     public class Solution {
         private void reverse(int[] nums, int start, int end) {
             while (start < end) {

@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top1 {
+public class Top01 {
     public class Solution {
         public void merge(int[] nums1, int m, int[] nums2, int n) {
             int i = m - 1;

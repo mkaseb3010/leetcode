@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top4 {
+public class Top04 {
     public class Solution {
         public int removeDuplicates(int[] nums) {
             if (nums.length <= 2) {

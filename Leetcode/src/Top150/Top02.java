@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top2 {
+public class Top02 {
     public class Solution {
         public int removeElement(int[] nums, int val) {
             int index = 0;

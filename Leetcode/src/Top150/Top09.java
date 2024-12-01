@@ -1,6 +1,6 @@
 package Top150;
 
-public class Top9 {
+public class Top09 {
     public class Solution {
         public boolean canJump(int[] nums) {
             int max = 0;
