@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March05 {
     class Solution {
         public long coloredCells(int n) {
