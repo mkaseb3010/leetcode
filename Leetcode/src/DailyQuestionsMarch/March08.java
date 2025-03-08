@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March08 {
     class Solution {
         public int minimumRecolors(String blocks, int k) {
