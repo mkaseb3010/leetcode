@@ -1,5 +1,7 @@
 package DailyQuestionsMarch;
 
+import java.util.*;
+
 public class March09 {
     class Solution {
         public int numberOfAlternatingGroups(int[] colors, int k) {
