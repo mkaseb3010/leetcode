@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March10 {
     class Solution {
         public long countOfSubstrings(String word, int k) {
