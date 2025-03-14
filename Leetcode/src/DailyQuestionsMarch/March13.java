@@ -1,3 +1,7 @@
+package DailyQuestionsMarch;
+
+import java.util.*;
+
 public class March13 {
     class Solution {
         private boolean currentIndexZero(int[] nums, int[][] queries, int k) {
