@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March15 {
     class Solution {
         private boolean canRob(int[] nums, int k, int cap) {
