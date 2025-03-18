@@ -1,3 +1,7 @@
+package DailyQuestionsMarch;
+
+import java.util.HashMap;
+
 public class March17 {
     class Solution {
         public boolean divideArray(int[] nums) {

@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March16 {
     class Solution {
         private boolean canRepairAllCars(int[] ranks, int cars, long maxTime) {
