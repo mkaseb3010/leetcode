@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March18 {
     class Solution {
         public int longestNiceSubarray(int[] nums) {
