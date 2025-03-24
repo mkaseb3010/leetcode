@@ -1,3 +1,5 @@
+package DailyQuestionsMarch;
+
 public class March19 {
     class Solution {
         public int minOperations(int[] nums) {
