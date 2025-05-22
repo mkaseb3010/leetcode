@@ -1,3 +1,5 @@
+package DailyQuestionsApril;
+
 public class April03 {
     class Solution {
         public long maximumTripletValue(int[] nums) {
