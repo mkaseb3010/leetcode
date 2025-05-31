@@ -1,3 +1,7 @@
+package DailyQuestionsApril;
+
+import java.util.*;
+
 public class April04 {
     class Solution {
         private class Result {
