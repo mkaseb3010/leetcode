@@ -1,3 +1,7 @@
+package DailyQuestionsApril;
+
+import java.util.*;
+
 public class April12 {
     class Solution {
         public long countGoodIntegers(int n, int k) {
