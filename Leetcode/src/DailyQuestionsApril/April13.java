@@ -13,7 +13,7 @@ public class April13 {
             long odd = n / 2;
             long mod = 1000000007;
         
-            return (int)((goodNumbers(5,even,mod)*goodNumbers(4,odd,mod))%mod);
+            return (int)((goodNumbers(5,even,mod)*goodNumbers(4, odd, mod)) % mod);
         }
 
         public long goodNumbers(long base,long expo,long mod){
