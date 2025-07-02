@@ -1,3 +1,5 @@
+package DailyQuestionsApril;
+
 public class April23 {
     class Solution {
         private int digsum(int n) {
