@@ -16,7 +16,8 @@ public class April24 {
                     res += nums.length - i;
                     arrayMap.put(nums[left], arrayMap.get(nums[left]) - 1);
 
-                    if (arrayMap.get(nums[left]) == 0) arrayMap.remove(nums[left]) {
+                    if (arrayMap.get(nums[left]) == 0) {
+                        arrayMap.remove(nums[left]);
                         left++;
                     }
                 }
