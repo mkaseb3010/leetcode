@@ -1,5 +1,9 @@
 package DailyQuestionsApril;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class April25 {
     class Solution {
         public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
