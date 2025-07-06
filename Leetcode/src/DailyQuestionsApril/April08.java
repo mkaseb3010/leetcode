@@ -3,7 +3,7 @@ package DailyQuestionsApril;
 import java.util.*;
 
 public class April08 {
-        class Solution {
+    class Solution {
         public int minimumOperations(int[] nums) {
             int n = nums.length;
             int ops = 0;

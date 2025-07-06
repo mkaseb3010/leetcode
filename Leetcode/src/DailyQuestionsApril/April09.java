@@ -2,16 +2,18 @@ package DailyQuestionsApril;
 
 import java.util.*;
 
-class Solution {
-    public int minOperations(int[] nums, int k) {
-        Set<Integer> st = new HashSet<>();
-        for (int x : nums) {
-            if (x < k) {
-                return -1;
-            } else if (x > k) {
-                st.add(x);
+public class April09 {
+    class Solution {
+        public int minOperations(int[] nums, int k) {
+            Set<Integer> st = new HashSet<>();
+            for (int x : nums) {
+                if (x < k) {
+                    return -1;
+                } else if (x > k) {
+                    st.add(x);
+                }
             }
+            return st.size();
         }
-        return st.size();
     }
 }
