@@ -1,6 +1,5 @@
 package DailyQuestionsApril;
 
-import javax.swing.tree.TreeNode;
 
 public class April04 {
     class Solution {
