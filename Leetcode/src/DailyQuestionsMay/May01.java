@@ -1,5 +1,7 @@
 package DailyQuestionsMay;
 
+import java.util.*;
+
 public class May01 {
     class Solution {
         private void decrement(TreeMap<Integer, Integer> m, int k) {
