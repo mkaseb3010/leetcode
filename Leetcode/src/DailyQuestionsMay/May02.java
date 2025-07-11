@@ -38,7 +38,6 @@ public class May02 {
                 else if (f < 0) result.append('L');
                 else result.append('.');
             }
-
             return result.toString();
         }
     }
