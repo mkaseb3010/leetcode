@@ -12,7 +12,7 @@ public class May04 {
                     mpp[d[1] * 10 + d[0]]++;
                 }
             }
-            
+
             int count = 0;
 
             for (int freq : mpp) {
