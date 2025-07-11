@@ -1,5 +1,6 @@
 package DailyQuestionsMay;
 
+
 public class May02 {
     class Solution {
         public String pushDominoes(String dominoes) {
@@ -34,9 +35,13 @@ public class May02 {
             StringBuilder result = new StringBuilder();
 
             for (int f : forces) {
-                if (f > 0) result.append('R');
-                else if (f < 0) result.append('L');
-                else result.append('.');
+                if (f > 0) {
+                    result.append('R');
+                } else if (f < 0) {
+                    result.append('L');
+                } else {
+                    result.append('.');
+                }
             }
             return result.toString();
         }

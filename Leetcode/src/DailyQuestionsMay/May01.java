@@ -27,8 +27,9 @@ public class May01 {
 
                 TreeMap<Integer, Integer> avail = new TreeMap<>();
 
-                for (int i = workers.length - mid; i < workers.length; ++i)
+                for (int i = workers.length - mid; i < workers.length; ++i) {
                     avail.put(workers[i], avail.getOrDefault(workers[i], 0) + 1);
+                }
 
                 boolean canAssign = true;
 
@@ -49,10 +50,11 @@ public class May01 {
                     }
                 }
 
-                if (canAssign)
+                if (canAssign) {
                     left = mid;
-                else
+                }else {
                     right = mid - 1;
+                }
             }
             return left;
         }
