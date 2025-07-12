@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May06 {
     class Solution {
         public int[] buildArray(int[] nums) {

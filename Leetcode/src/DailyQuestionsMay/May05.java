@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May05 {
     class Solution {
         public int numTilings(int n) {
