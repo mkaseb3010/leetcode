@@ -14,8 +14,10 @@ public class May07 {
             }
 
             PriorityQueue<int[]> minh = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+
             minh.add(new int[]{0, 0, 0});
             moveTime[0][0] = 0;
+
             int[][] directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
             while (!minh.isEmpty()) {
