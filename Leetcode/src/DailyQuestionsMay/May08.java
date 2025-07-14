@@ -1,3 +1,7 @@
+package DailyQuestionsMay;
+
+import java.util.*;
+
 public class May08 {
     class Solution {
         public int minTimeToReach(int[][] moveTime) {
