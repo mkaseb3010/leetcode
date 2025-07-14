@@ -1,7 +1,11 @@
+package DailyQuestionsMay;
+
 public class May09 {
     class Solution {
         private static final int mod = 1_000_000_007;
+
         private long[] fact, inv, invFact;
+
         private void precompute(int n) {
             fact = new long[n+1];
             inv = new long[n+1];
