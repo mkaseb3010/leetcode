@@ -9,7 +9,7 @@ public class May10 {
             long sum2 = 0;
 
             for (int i : nums1) {
-                if(i == 0) {
+                if (i == 0) {
                     nums1Zeroes++;
                 }
                 sum1 += i;
