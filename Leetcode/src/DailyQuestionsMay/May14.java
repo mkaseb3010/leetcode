@@ -7,7 +7,7 @@ public class May14 {
     class Solution {
         public List<String> getLongestSubsequence(String[] words, int[] groups) {
             List<String> result = new ArrayList<>();
-            
+
             if (words.length == 0) {
                 return result;
             }
