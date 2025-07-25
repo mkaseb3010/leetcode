@@ -1,3 +1,8 @@
+package DailyQuestionsMay;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class May14 {
     class Solution {
         public List<String> getLongestSubsequence(String[] words, int[] groups) {
