@@ -5,7 +5,7 @@ import java.util.List;
 public class May13 {
     class Solution {
         private static final int mod = 1_000_000_007;
-        
+
         private long[][] multiplyMatrices(long[][] A, long[][] B) {
             int rowsA = A.length;
             int colsA = A[0].length;
@@ -31,7 +31,7 @@ public class May13 {
             for (int i = 0; i < n; i++) {
                 result[i][i] = 1;
             }
-            
+
             while (exponent > 0) {
                 if ((exponent & 1) == 1) {
                     result = multiplyMatrices(result, matrix);
@@ -60,7 +60,7 @@ public class May13 {
 
             freq = multiplyMatrices(freq, transform);
             long total = 0;
-            
+
             for (long cnt : freq[0]) {
                 total = (total + cnt) % mod;
             }
