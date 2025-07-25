@@ -14,11 +14,9 @@ public class May13 {
 
             for (int i = 0; i < rowsA; i++) {
                 for (int j = 0; j < colsB; j++) {
-                    long sum = 0;
                     for (int k = 0; k < colsA; k++) {
-                        sum = (sum + (A[i][k] * B[k][j]) % mod) % mod;
+                        result[i][j] = (result[i][j] + A[i][k] * B[k][j]) % mod;
                     }
-                    result[i][j] = sum;
                 }
             }
             return result;
