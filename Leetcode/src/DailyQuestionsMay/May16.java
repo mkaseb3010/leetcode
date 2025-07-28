@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May16 {
     class Solution {
         public void sortColors(int[] nums) {
