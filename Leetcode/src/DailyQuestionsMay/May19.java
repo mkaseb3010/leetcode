@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May19 {
     class Solution {
         public boolean threeConsecutiveOdds(int[] arr) {
