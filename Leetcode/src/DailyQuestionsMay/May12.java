@@ -2,33 +2,45 @@ package DailyQuestionsMay;
 
 public class May12 {
     class Solution {
-        private static final int MOD = 1_000_000_007;
+        public int[] findEvenNumbers(int[] digits) {
+            Set<Integer> result = new TreeSet<>();
 
-        public int lengthAfterTransformations(String s, int t) {
-            long[] freq = new long[26];
+            for (int i = 0; i < digits.length; i++) {
+                for (int j = 0; j < digits.length; j++) {
+                    if (j == i) {
+                        continue;
+                    }
 
-            for (char ch : s.toCharArray()) {
-                freq[ch - 'a']++;
-            }
+                    for (int k = 0; k < digits.length; k++) {
+                        if (k == i || k == j) {
+                            continue;
+                        }
 
-            for (int step = 0; step < t; step++) {
-                long[] nextFreq = new long[26];
+                        int a = digits[i];
+                        int b = digits[j];
+                        int c = digits[k];
 
-                for (int i = 0; i < 25; i++) {
-                    nextFreq[i + 1] = (nextFreq[i + 1] + freq[i]) % MOD;
+                        if (a == 0) {
+                            continue;
+                        }
+
+                        if (c % 2 != 0) {
+                            continue;
+                        }
+
+                        int num = a * 100 + b * 10 + c;
+                        result.add(num);
+                    }
                 }
-
-                nextFreq[0] = (nextFreq[0] + freq[25]) % MOD;
-                nextFreq[1] = (nextFreq[1] + freq[25]) % MOD;
-                freq = nextFreq;
             }
 
-            long total = 0;
+            int[] output = new int[result.size()];
+            int index = 0;
 
-            for (long count : freq) {
-                total = (total + count) % MOD;
+            for (int num : result) {
+                output[index++] = num;
             }
-            return (int) total;
+            return output;
         }
     }
 }

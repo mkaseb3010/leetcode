@@ -2,21 +2,26 @@ package DailyQuestionsMay;
 
 public class May19 {
     class Solution {
-        public boolean threeConsecutiveOdds(int[] arr) {
-            int count = 0;
+        public String triangleType(int[] nums) {
+            Arrays.sort(nums);
 
-            for (int num : arr) {
-                if (num % 2 != 0) {
-                    count++;
-                    if (count == 3) {
-                        return true;
-                    }
-                }else {
-                    count = 0;
-                }
+            int a = nums[0];
+            int b = nums[1];
+            int c = nums[2];
+
+            if (a + b <= c) {
+                return "none";
             }
 
-            return false;
+            if (a == b && b == c) {
+                return "equilateral";
+            }
+
+            if (a == b || b == c || a == c) {
+                return "isosceles";
+            
+            }
+            return "scalene";
         }
     }
 }

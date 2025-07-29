@@ -1,49 +1,22 @@
 package DailyQuestionsMay;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 public class May11 {
     class Solution {
-        public int[] findEvenNumbers(int[] digits) {
-            Set<Integer> result = new TreeSet<>();
+        public boolean threeConsecutiveOdds(int[] arr) {
+            int count = 0;
 
-            for (int i = 0; i < digits.length; i++) {
-                for (int j = 0; j < digits.length; j++) {
-                    if (j == i) {
-                        continue;
+            for (int num : arr) {
+                if (num % 2 != 0) {
+                    count++;
+                    if (count == 3) {
+                        return true;
                     }
-
-                    for (int k = 0; k < digits.length; k++) {
-                        if (k == i || k == j) {
-                            continue;
-                        }
-
-                        int a = digits[i];
-                        int b = digits[j];
-                        int c = digits[k];
-
-                        if (a == 0) {
-                            continue;
-                        }
-
-                        if (c % 2 != 0) {
-                            continue;
-                        }
-
-                        int num = a * 100 + b * 10 + c;
-                        result.add(num);
-                    }
+                }else {
+                    count = 0;
                 }
             }
 
-            int[] output = new int[result.size()];
-            int index = 0;
-
-            for (int num : result) {
-                output[index++] = num;
-            }
-            return output;
+            return false;
         }
     }
 }
