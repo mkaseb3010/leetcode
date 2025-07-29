@@ -1,9 +1,5 @@
 package DailyQuestionsMay;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class May17 {
     class Solution {
         public void sortColors(int[] nums) {

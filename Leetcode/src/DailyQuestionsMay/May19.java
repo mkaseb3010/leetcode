@@ -1,5 +1,7 @@
 package DailyQuestionsMay;
 
+import java.util.Arrays;
+
 public class May19 {
     class Solution {
         public String triangleType(int[] nums) {

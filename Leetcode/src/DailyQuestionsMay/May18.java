@@ -1,6 +1,8 @@
 package DailyQuestionsMay;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class May18 {
     class Solution {
