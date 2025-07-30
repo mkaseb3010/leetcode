@@ -1,5 +1,13 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 2, 2023.
+ * Problem: Push Dominoes.
+ * Link: https://leetcode.com/problems/push-dominoes/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
 public class May02 {
     class Solution {
@@ -37,9 +45,9 @@ public class May02 {
             for (int f : forces) {
                 if (f > 0) {
                     result.append('R');
-                } else if (f < 0) {
+                }else if (f < 0) {
                     result.append('L');
-                } else {
+                }else {
                     result.append('.');
                 }
             }

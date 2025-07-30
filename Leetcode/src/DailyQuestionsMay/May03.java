@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 3, 2023.
+ * Problem: Minimum Domino Rotations For Equal Row.
+ * Link: https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May03 {
     class Solution {
         public int minDominoRotations(int[] tops, int[] bottoms) {
