@@ -1,6 +1,17 @@
 package DailyQuestionsMay;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+/**
+ * LeetCode Daily Challenge for May 7, 2023.
+ * Problem: Minimum Time to Reach Destination in a Grid.
+ * Link: https://leetcode.com/problems/minimum-time-to-reach-destination-in-a-grid/
+ */
+
+// Time Complexity: O(n * m * log(n * m))
+// Space Complexity: O(n * m)
 
 public class May07 {
     class Solution {

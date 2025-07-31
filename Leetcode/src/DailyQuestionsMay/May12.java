@@ -3,6 +3,15 @@ package DailyQuestionsMay;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * LeetCode Daily Challenge for May 12, 2023.
+ * Problem: Find All Possible Even 3-Digit Numbers.
+ * Link: https://leetcode.com/problems/find-all-possible-even-3-digit-numbers/
+ */
+
+// Time Complexity: O(n^3)
+// Space Complexity: O(n^3)
+
 public class May12 {
     class Solution {
         public int[] findEvenNumbers(int[] digits) {

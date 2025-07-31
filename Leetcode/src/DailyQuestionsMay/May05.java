@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 5, 2023.
+ * Problem: Domino and Tromino Tiling.
+ * Link: https://leetcode.com/problems/domino-and-tromino-tiling/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
 public class May05 {
     class Solution {
         public int numTilings(int n) {

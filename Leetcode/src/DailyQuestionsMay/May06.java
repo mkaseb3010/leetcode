@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 6, 2023.
+ * Problem: Build Array from Permutation.
+ * Link: https://leetcode.com/problems/build-array-from-permutation/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May06 {
     class Solution {
         public int[] buildArray(int[] nums) {

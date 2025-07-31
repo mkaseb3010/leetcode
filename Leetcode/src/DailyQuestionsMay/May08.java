@@ -1,6 +1,17 @@
 package DailyQuestionsMay;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+/**
+ * LeetCode Daily Challenge for May 8, 2023.
+ * Problem: Minimum Time to Reach Destination in a Grid.
+ * Link: https://leetcode.com/problems/minimum-time-to-reach-destination-in-a-grid/
+ */
+
+// Time Complexity: O(n * m * log(n * m))
+// Space Complexity: O(n * m)
 
 public class May08 {
     class Solution {
@@ -15,8 +26,10 @@ public class May08 {
             }
 
             PriorityQueue<int[]> minh = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+
             minh.add(new int[]{0, 0, 0});
             moveTime[0][0] = 0;
+
             int[][] directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
             while (!minh.isEmpty()) {

@@ -5,6 +5,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * LeetCode Daily Challenge for May 16, 2023.
+ * Problem: Longest Subsequence with Distinct Groups.
+ * Link: https://leetcode.com/problems/longest-subsequence-with-distinct-groups/
+ */
+
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
+
 public class May16 {
     class Solution {
         public boolean differByOneChar(String word1, String word2) {

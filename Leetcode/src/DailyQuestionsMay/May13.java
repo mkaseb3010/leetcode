@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 13, 2023.
+ * Problem: Length of String After Transformations.
+ * Link: https://leetcode.com/problems/length-of-string-after-transformations/
+ */
+
+// Time Complexity: O(t * n)
+// Space Complexity: O(n)
+
 public class May13 {
     class Solution {
         private static final int MOD = 1_000_000_007;

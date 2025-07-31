@@ -2,6 +2,15 @@ package DailyQuestionsMay;
 
 import java.util.Arrays;
 
+/**
+ * LeetCode Daily Challenge for May 19, 2023.
+ * Problem: Triangle Type.
+ * Link: https://leetcode.com/problems/triangle-type/
+ */
+
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
+
 public class May19 {
     class Solution {
         public String triangleType(int[] nums) {

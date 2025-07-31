@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 9, 2023.
+ * Problem: Count Balanced Permutations.
+ * Link: https://leetcode.com/problems/count-balanced-permutations/
+ */
+
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
+
 public class May09 {
     class Solution {
         private static final int mod = 1_000_000_007;
@@ -57,6 +66,7 @@ public class May09 {
 
             long res = dp[halfSum][halfLen];
             res = res * fact[halfLen] % mod * fact[n-halfLen] % mod;
+
             for (int cnt : digits) {
                 res = res * invFact[cnt] % mod;
             }

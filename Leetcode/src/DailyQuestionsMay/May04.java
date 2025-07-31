@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 4, 2023.
+ * Problem: Number of Equivalent Domino Pairs.
+ * Link: https://leetcode.com/problems/number-of-equivalent-domino-pairs/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May04 {
     class Solution {
         public int numEquivDominoPairs(int[][] dominoes) {

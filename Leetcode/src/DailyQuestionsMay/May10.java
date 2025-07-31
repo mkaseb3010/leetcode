@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 10, 2023.
+ * Problem: Minimum Sum of Two Arrays After Operations.
+ * Link: https://leetcode.com/problems/minimum-sum-of-two-arrays-after-operations/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May10 {
     class Solution {
         public long minSum(int[] nums1, int[] nums2) {

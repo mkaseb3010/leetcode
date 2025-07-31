@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 17, 2023.
+ * Problem: Sort Colors.
+ * Link: https://leetcode.com/problems/sort-colors/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May17 {
     class Solution {
         public void sortColors(int[] nums) {

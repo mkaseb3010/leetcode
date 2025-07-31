@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * LeetCode Daily Challenge for May 18, 2023.
+ * Problem: Color the Grid.
+ * Link: https://leetcode.com/problems/color-the-grid/
+ */
+
+// Time Complexity: O(m^n * 3^m)
+// Space Complexity: O(m^n)
+
 public class May18 {
     class Solution {
         private static final int MOD = 1_000_000_007;
