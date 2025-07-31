@@ -1,3 +1,9 @@
+package DailyQuestionsMay;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.PriorityQueue;
+
 public class May22 {
     class Solution {
         public int maxRemoval(int[] nums, int[][] queries) {
