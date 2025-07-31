@@ -4,6 +4,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode Daily Challenge for May 22, 2023.
+ * Problem: Maximum Removals.
+ * Link: https://leetcode.com/problems/maximum-removals/
+ */
+
+// Time Complexity: O(n log n + m log m)
+// Space Complexity: O(n + m)
+
 public class May22 {
     class Solution {
         public int maxRemoval(int[] nums, int[][] queries) {
