@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May23 {
     class Solution {
         public long maximumValueSum(int[] nums, int k, int[][] edges) {
