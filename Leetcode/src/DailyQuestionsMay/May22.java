@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 // Space Complexity: O(n + m)
 
 public class May22 {
-    class Solution {
+    public class Solution {
         public int maxRemoval(int[] nums, int[][] queries) {
             Arrays.sort(queries, (a, b) -> Integer.compare(a[0], b[0]));
             PriorityQueue<Integer> available = new PriorityQueue<>(Collections.reverseOrder());

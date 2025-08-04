@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May03 {
-    class Solution {
+    public class Solution {
         public int minDominoRotations(int[] tops, int[] bottoms) {
             int result = check(tops[0], tops, bottoms);
 

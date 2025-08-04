@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May23 {
-    class Solution {
+    public class Solution {
         public long maximumValueSum(int[] nums, int k, int[][] edges) {
             long[] dp = {0, Long.MIN_VALUE};
 

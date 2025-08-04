@@ -13,7 +13,7 @@ import java.util.List;
 // Space Complexity: O(n)
 
 public class May15 {
-    class Solution {
+    public class Solution {
         public List<String> getLongestSubsequence(String[] words, int[] groups) {
             List<String> result = new ArrayList<>();
 

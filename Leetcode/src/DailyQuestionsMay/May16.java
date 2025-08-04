@@ -15,7 +15,7 @@ import java.util.List;
 // Space Complexity: O(n)
 
 public class May16 {
-    class Solution {
+    public class Solution {
         public boolean differByOneChar(String word1, String word2) {
             if (word1.length() != word2.length()) {
                 return false;

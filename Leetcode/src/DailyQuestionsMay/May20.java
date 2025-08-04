@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(n)
 
 public class May20 {
-    class Solution {
+    public class Solution {
         public boolean isZeroArray(int[] nums, int[][] queries) {
             int n = nums.length;
             int[] freq = new int[n + 1];

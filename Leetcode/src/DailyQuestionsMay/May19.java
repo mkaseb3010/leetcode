@@ -12,7 +12,7 @@ import java.util.Arrays;
 // Space Complexity: O(1)
 
 public class May19 {
-    class Solution {
+    public class Solution {
         public String triangleType(int[] nums) {
             Arrays.sort(nums);
 

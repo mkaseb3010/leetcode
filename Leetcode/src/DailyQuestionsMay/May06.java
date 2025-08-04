@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May06 {
-    class Solution {
+    public class Solution {
         public int[] buildArray(int[] nums) {
             for (int i = 0; i < nums.length; i++)
                 nums[i] += (1024 * (nums[nums[i]] % 1024));

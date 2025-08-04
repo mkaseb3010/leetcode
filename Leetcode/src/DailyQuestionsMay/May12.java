@@ -13,7 +13,7 @@ import java.util.TreeSet;
 // Space Complexity: O(n^3)
 
 public class May12 {
-    class Solution {
+    public class Solution {
         public int[] findEvenNumbers(int[] digits) {
             Set<Integer> result = new TreeSet<>();
 

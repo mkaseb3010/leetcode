@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May21 {
-    class Solution {
+    public class Solution {
         public void setZeroes(int[][] matrix) {
             int m = matrix.length;
             int n = matrix[0].length;

@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May04 {
-    class Solution {
+    public class Solution {
         public int numEquivDominoPairs(int[][] dominoes) {
             int[] mpp = new int[100];
 

@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May11 {
-    class Solution {
+    public class Solution {
         public boolean threeConsecutiveOdds(int[] arr) {
             int count = 0;
 

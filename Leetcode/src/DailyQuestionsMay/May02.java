@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(n)
 
 public class May02 {
-    class Solution {
+    public class Solution {
         public String pushDominoes(String dominoes) {
             int n = dominoes.length();
             int[] forces = new int[n];
@@ -19,9 +19,9 @@ public class May02 {
             for (int i = 0; i < n; i++) {
                 if (dominoes.charAt(i) == 'R') {
                     force = n;
-                } else if (dominoes.charAt(i) == 'L') {
+                }else if (dominoes.charAt(i) == 'L') {
                     force = 0;
-                } else {
+                }else {
                     force = Math.max(force - 1, 0);
                 }
                 forces[i] += force;
@@ -32,9 +32,9 @@ public class May02 {
             for (int i = n - 1; i >= 0; i--) {
                 if (dominoes.charAt(i) == 'L') {
                     force = n;
-                } else if (dominoes.charAt(i) == 'R') {
+                }else if (dominoes.charAt(i) == 'R') {
                     force = 0;
-                } else {
+                }else {
                     force = Math.max(force - 1, 0);
                 }
                 forces[i] -= force;

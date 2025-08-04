@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 // Space Complexity: O(n * m)
 
 public class May08 {
-    class Solution {
+    public class Solution {
         public int minTimeToReach(int[][] moveTime) {
             int n = moveTime.length;
             int m = moveTime[0].length;

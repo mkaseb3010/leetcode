@@ -14,7 +14,7 @@ import java.util.List;
 // Space Complexity: O(m^n)
 
 public class May18 {
-    class Solution {
+    public class Solution {
         private static final int MOD = 1_000_000_007;
 
         private void generateValidColumns(int m, List<Integer> current, List<List<Integer>> result) {

@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May17 {
-    class Solution {
+    public class Solution {
         public void sortColors(int[] nums) {
             int low = 0;
             int mid = 0;

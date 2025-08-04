@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(n)
 
 public class May05 {
-    class Solution {
+    public class Solution {
         public int numTilings(int n) {
             int MOD = 1_000_000_007;
 

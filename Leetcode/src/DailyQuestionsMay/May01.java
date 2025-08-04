@@ -14,7 +14,7 @@ import java.util.TreeMap;
 
 
 public class May01 {
-    class Solution {
+    public class Solution {
         private void decrement(TreeMap<Integer, Integer> m, int k) {
             int c = m.get(k);
 

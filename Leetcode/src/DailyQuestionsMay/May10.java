@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May10 {
-    class Solution {
+    public class Solution {
         public long minSum(int[] nums1, int[] nums2) {
             long nums1Zeroes = 0;
             long nums2Zeroes = 0;
