@@ -1,4 +1,4 @@
-package src.DailyQuestionsMay;
+package DailyQuestionsMay;
 
 /**
  * LeetCode Daily Challenge for May 20, 2023.
