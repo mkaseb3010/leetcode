@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 23, 2023.
+ * Problem: Maximum Value Sum.
+ * Link: https://leetcode.com/problems/maximum-value-sum/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May23 {
     class Solution {
         public long maximumValueSum(int[] nums, int k, int[][] edges) {
