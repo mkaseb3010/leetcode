@@ -3,7 +3,7 @@ package DailyQuestionsMay;
 /**
  * LeetCode Daily Challenge for May 9, 2023.
  * Problem: Count Balanced Permutations.
- * Link: https://leetcode.com/problems/count-balanced-permutations/
+ * Link: https://leetcode.com/problems/count-number-of-balanced-permutations/
  */
 
 // Time Complexity: O(n^2)

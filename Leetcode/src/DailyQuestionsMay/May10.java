@@ -3,7 +3,7 @@ package DailyQuestionsMay;
 /**
  * LeetCode Daily Challenge for May 10, 2023.
  * Problem: Minimum Sum of Two Arrays After Operations.
- * Link: https://leetcode.com/problems/minimum-sum-of-two-arrays-after-operations/
+ * Link: https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/
  */
 
 // Time Complexity: O(n)
