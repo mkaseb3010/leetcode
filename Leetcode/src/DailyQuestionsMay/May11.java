@@ -17,6 +17,7 @@ public class May11 {
             for (int num : arr) {
                 if (num % 2 != 0) {
                     count++;
+
                     if (count == 3) {
                         return true;
                     }
@@ -24,7 +25,6 @@ public class May11 {
                     count = 0;
                 }
             }
-
             return false;
         }
     }
