@@ -3,7 +3,7 @@ package DailyQuestionsMay;
 import java.util.Arrays;
 
 /**
- * LeetCode Daily Challenge for May 19, 2023.
+ * LeetCode Daily Challenge for May 19, 2025.
  * Problem: Triangle Type.
  * Link: https://leetcode.com/problems/triangle-type/
  */

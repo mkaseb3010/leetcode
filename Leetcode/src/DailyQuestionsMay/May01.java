@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.TreeMap;
 
 /**
- * LeetCode Daily Challenge for May 1, 2023.
+ * LeetCode Daily Challenge for May 1, 2025.
  * Problem: Maximum Number of Tasks You Can Assign.
  * Link: https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/
  */

@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 23, 2023.
+ * LeetCode Daily Challenge for May 23, 2025.
  * Problem: Maximum Value Sum.
  * Link: https://leetcode.com/problems/maximum-value-sum/
  */

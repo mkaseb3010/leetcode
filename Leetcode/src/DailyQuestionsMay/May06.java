@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 6, 2023.
+ * LeetCode Daily Challenge for May 6, 2025.
  * Problem: Build Array from Permutation.
  * Link: https://leetcode.com/problems/build-array-from-permutation/
  */

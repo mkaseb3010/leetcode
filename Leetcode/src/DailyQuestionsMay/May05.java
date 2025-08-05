@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 5, 2023.
+ * LeetCode Daily Challenge for May 5, 2025.
  * Problem: Domino and Tromino Tiling.
  * Link: https://leetcode.com/problems/domino-and-tromino-tiling/
  */

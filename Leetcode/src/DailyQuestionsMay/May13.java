@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 13, 2023.
+ * LeetCode Daily Challenge for May 13, 2025.
  * Problem: Length of String After Transformations.
  * Link: https://leetcode.com/problems/length-of-string-after-transformations/
  */

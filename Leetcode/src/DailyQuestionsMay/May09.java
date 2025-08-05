@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 9, 2023.
+ * LeetCode Daily Challenge for May 9, 2025.
  * Problem: Count Balanced Permutations.
  * Link: https://leetcode.com/problems/count-number-of-balanced-permutations/
  */

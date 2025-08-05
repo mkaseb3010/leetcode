@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 17, 2023.
+ * LeetCode Daily Challenge for May 17, 2025.
  * Problem: Sort Colors.
  * Link: https://leetcode.com/problems/sort-colors/
  */

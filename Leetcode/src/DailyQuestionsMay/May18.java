@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * LeetCode Daily Challenge for May 18, 2023.
+ * LeetCode Daily Challenge for May 18, 2025.
  * Problem: Color the Grid.
  * Link: https://leetcode.com/problems/color-the-grid/
  */

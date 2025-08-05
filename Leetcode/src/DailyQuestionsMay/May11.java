@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 11, 2023.
+ * LeetCode Daily Challenge for May 11, 2025.
  * Problem: Three Consecutive Odds.
  * Link: https://leetcode.com/problems/three-consecutive-odds/
  */

@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 3, 2023.
+ * LeetCode Daily Challenge for May 3, 2025.
  * Problem: Minimum Domino Rotations For Equal Row.
  * Link: https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
  */

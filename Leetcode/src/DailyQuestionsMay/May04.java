@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 4, 2023.
+ * LeetCode Daily Challenge for May 4, 2025.
  * Problem: Number of Equivalent Domino Pairs.
  * Link: https://leetcode.com/problems/number-of-equivalent-domino-pairs/
  */

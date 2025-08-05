@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 2, 2023.
+ * LeetCode Daily Challenge for May 2, 2025.
  * Problem: Push Dominoes.
  * Link: https://leetcode.com/problems/push-dominoes/
  */

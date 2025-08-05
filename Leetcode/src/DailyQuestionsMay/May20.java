@@ -1,7 +1,7 @@
 package DailyQuestionsMay;
 
 /**
- * LeetCode Daily Challenge for May 20, 2023.
+ * LeetCode Daily Challenge for May 20, 2025.
  * Problem: Zero Array.
  * Link: https://leetcode.com/problems/zero-array/
  */

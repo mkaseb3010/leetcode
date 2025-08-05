@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * LeetCode Daily Challenge for May 15, 2023.
+ * LeetCode Daily Challenge for May 15, 2025.
  * Problem: Longest Subsequence with Distinct Groups.
  * Link: https://leetcode.com/problems/longest-subsequence-with-distinct-groups/
  */
