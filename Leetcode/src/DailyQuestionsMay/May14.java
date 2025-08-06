@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * LeetCode Daily Challenge for May 14, 2025.
  * Problem: Length of String After Transformations.
- * Link: https://leetcode.com/problems/length-of-string-after-transformations/
+ * Link: https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/
  */
 
 // Time Complexity: O(t * n)

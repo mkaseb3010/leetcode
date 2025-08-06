@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * LeetCode Daily Challenge for May 19, 2025.
  * Problem: Triangle Type.
- * Link: https://leetcode.com/problems/triangle-type/
+ * Link: https://leetcode.com/problems/type-of-triangle/
  */
 
 // Time Complexity: O(n log n)

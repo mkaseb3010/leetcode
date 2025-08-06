@@ -3,7 +3,7 @@ package DailyQuestionsMay;
 /**
  * LeetCode Daily Challenge for May 23, 2025.
  * Problem: Maximum Value Sum.
- * Link: https://leetcode.com/problems/maximum-value-sum/
+ * Link: https://leetcode.com/problems/find-the-maximum-sum-of-node-values/
  */
 
 // Time Complexity: O(n)

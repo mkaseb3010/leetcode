@@ -3,7 +3,7 @@ package DailyQuestionsMay;
 /**
  * LeetCode Daily Challenge for May 13, 2025.
  * Problem: Length of String After Transformations.
- * Link: https://leetcode.com/problems/length-of-string-after-transformations/
+ * Link: https://leetcode.com/problems/total-characters-in-string-after-transformations-i/
  */
 
 // Time Complexity: O(t * n)

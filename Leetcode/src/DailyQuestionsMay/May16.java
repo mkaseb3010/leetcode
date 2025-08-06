@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * LeetCode Daily Challenge for May 16, 2025.
  * Problem: Longest Subsequence with Distinct Groups.
- * Link: https://leetcode.com/problems/longest-subsequence-with-distinct-groups/
+ * Link: https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/
  */
 
 // Time Complexity: O(n^2)

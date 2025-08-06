@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 /**
  * LeetCode Daily Challenge for May 22, 2025.
  * Problem: Maximum Removals.
- * Link: https://leetcode.com/problems/maximum-removals/
+ * Link: https://leetcode.com/problems/zero-array-transformation-iii/
  */
 
 // Time Complexity: O(n log n + m log m)

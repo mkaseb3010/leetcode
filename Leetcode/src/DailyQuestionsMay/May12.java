@@ -6,7 +6,7 @@ import java.util.TreeSet;
 /**
  * LeetCode Daily Challenge for May 12, 2025.
  * Problem: Find All Possible Even 3-Digit Numbers.
- * Link: https://leetcode.com/problems/find-all-possible-even-3-digit-numbers/
+ * Link: https://leetcode.com/problems/finding-3-digit-even-numbers/
  */
 
 // Time Complexity: O(n^3)

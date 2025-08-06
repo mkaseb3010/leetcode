@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * LeetCode Daily Challenge for May 18, 2025.
  * Problem: Color the Grid.
- * Link: https://leetcode.com/problems/color-the-grid/
+ * Link: https://leetcode.com/problems/painting-a-grid-with-three-different-colors/
  */
 
 // Time Complexity: O(m^n * 3^m)
