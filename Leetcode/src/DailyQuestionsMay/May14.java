@@ -13,7 +13,7 @@ import java.util.List;
 
 public class May14 {
     public class Solution {
-        private static final int mod = 1_000_000_007;
+        private static final int MOD = 1_000_000_007;
 
         private long[][] multiplyMatrices(long[][] A, long[][] B) {
             int rowsA = A.length;
@@ -24,7 +24,7 @@ public class May14 {
             for (int i = 0; i < rowsA; i++) {
                 for (int j = 0; j < colsB; j++) {
                     for (int k = 0; k < colsA; k++) {
-                        result[i][j] = (result[i][j] + A[i][k] * B[k][j]) % mod;
+                        result[i][j] = (result[i][j] + A[i][k] * B[k][j]) % MOD;
                     }
                 }
             }
@@ -69,7 +69,7 @@ public class May14 {
             long total = 0;
 
             for (long cnt : freq[0]) {
-                total = (total + cnt) % mod;
+                total = (total + cnt) % MOD;
             }
             return (int)total;
         }
