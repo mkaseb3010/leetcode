@@ -1,3 +1,8 @@
+package DailyQuestionsMay;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class May24 {
     public class Solution {
         public List<Integer> findWordsContaining(String[] words, char x) {

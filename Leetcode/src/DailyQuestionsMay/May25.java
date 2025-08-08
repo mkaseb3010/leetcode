@@ -1,3 +1,5 @@
+package DailyQuestionsMay;
+
 public class May25 {
     class Solution {
         public int longestPalindrome(String[] words) {

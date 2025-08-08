@@ -1,3 +1,10 @@
+package DailyQuestionsMay;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class May26 {
     class Solution {
         public int largestPathValue(String colors, int[][] edges) {
