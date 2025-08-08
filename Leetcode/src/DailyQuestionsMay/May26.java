@@ -15,7 +15,7 @@ import java.util.Queue;
 // Space Complexity: O(n)
 
 public class May26 {
-    class Solution {
+    public class Solution {
         public int largestPathValue(String colors, int[][] edges) {
             int n = colors.length();
             List<Integer>[] graph = new ArrayList[n];

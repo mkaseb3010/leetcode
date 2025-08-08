@@ -10,7 +10,7 @@ package DailyQuestionsMay;
 // Space Complexity: O(1)
 
 public class May25 {
-    class Solution {
+    public class Solution {
         public int longestPalindrome(String[] words) {
             int[][] count = new int[26][26];
             int length = 0;
