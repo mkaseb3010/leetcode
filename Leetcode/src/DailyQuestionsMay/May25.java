@@ -1,5 +1,14 @@
 package DailyQuestionsMay;
 
+/**
+ * LeetCode Daily Challenge for May 25, 2025.
+ * Problem: Longest Palindrome from Words.
+ * Link: https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/
+ */
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 public class May25 {
     class Solution {
         public int longestPalindrome(String[] words) {

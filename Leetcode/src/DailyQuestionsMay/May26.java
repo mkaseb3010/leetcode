@@ -5,6 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Daily Challenge for May 26, 2025.
+ * Problem: Largest Path Value.
+ * Link: https://leetcode.com/problems/largest-color-value-in-a-directed-graph/
+ */
+
+// Time Complexity: O(n + m)
+// Space Complexity: O(n)
+
 public class May26 {
     class Solution {
         public int largestPathValue(String colors, int[][] edges) {
